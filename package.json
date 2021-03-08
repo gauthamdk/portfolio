@@ -2,12 +2,11 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gauthamdk.github.io/gautham",
+  "homepage": "http://gauthamdk.github.io/portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "gh-pages-deploy": "^0.5.1",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -19,8 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -b master -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
