@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 
+import "../styles/body.scss";
+
 const Experiences = ({ exps }) => {
   const experiences = exps.map((exp) => {
     return (
@@ -11,7 +13,7 @@ const Experiences = ({ exps }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <h5>{exp.company}</h5>
+          <h5 className="subtitle">{exp.company}</h5>
         </a>
         <ul>
           {exp.achievements.map((a) => (
@@ -23,8 +25,9 @@ const Experiences = ({ exps }) => {
   });
 
   return (
-    <Container>
+    <Container className="px-3 pb-4">
       <h1>Experiences</h1>
+      <hr size="4" />
       <Row>{experiences}</Row>
     </Container>
   );

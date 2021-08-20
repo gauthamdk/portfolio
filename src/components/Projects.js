@@ -31,6 +31,7 @@ const Projects = ({ projs }) => {
   return (
     <Container>
       <h1>Projects</h1>
+      <hr size="4" />
       <Row>{projects}</Row>
     </Container>
   );
