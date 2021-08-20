@@ -5,3 +5,58 @@
 .subtitle {
   color: #bb86fc;
 }
+
+.progress-line {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background-color: #4242428e;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+    0px 1px rgba(12, 12, 12, 0.8);
+  border-radius: 10px;
+}
+
+.progress-line span {
+  height: 100%;
+  width: 80%;
+  background-color: #03dac5;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.skill {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.progress-line.Python span {
+  width: 85%;
+}
+
+.progress-line.JS span {
+  width: 80%;
+}
+
+.progress-line.SQL span {
+  width: 60%;
+}
+
+.progress-line.MongoDB span {
+  width: 80%;
+}
+
+.progress-line.React span {
+  width: 75%;
+}
+
+.progress-line.Docker span {
+  width: 70%;
+}
+
+.progress-line.NodeJS span {
+  width: 80%;
+}
+
+.progress-line.AWS span {
+  width: 40%;
+}
