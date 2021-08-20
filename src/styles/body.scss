@@ -11,9 +11,18 @@
   height: 10px;
   width: 100%;
   background-color: #4242428e;
+  transform-origin: left;
+  transform: scaleX(0);
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
     0px 1px rgba(12, 12, 12, 0.8);
   border-radius: 10px;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 .progress-line span {
@@ -22,6 +31,9 @@
   background-color: #03dac5;
   position: absolute;
   border-radius: 10px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
 .skill {
