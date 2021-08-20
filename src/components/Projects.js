@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Projects = ({ projs }) => {
   const projects = projs.map((proj) => {
@@ -10,8 +12,13 @@ const Projects = ({ projs }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <h5>{proj.name}</h5>
+          <h5 className="d-inline-block">{proj.name}</h5>
         </a>
+        {proj.github ? (
+          <a href={proj.github} className="d-inline-block px-2">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+        ) : null}
         <ul>
           {proj.description.map((a) => (
             <li>{a}</li>

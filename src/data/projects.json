@@ -8,8 +8,7 @@
       "Transferred data from local MySQL database to AWS RDS"
     ],
     "link": false,
-    "github": false,
-    "program": "Cloud Computing Project"
+    "github": false
   },
   {
     "id": 2,
@@ -21,8 +20,7 @@
       "Created MongoDB database to stored products, users, and orders with search and filter functions"
     ],
     "link": "http://egrocery-swe.herokuapp.com/",
-    "github": "https://github.com/gauthamdk/egrocery",
-    "program": ""
+    "github": "https://github.com/gauthamdk/egrocery"
   },
   {
     "id": 3,
@@ -32,8 +30,7 @@
       "Programmed interface using Python with the Drone SDK and Leap Motion SDK"
     ],
     "link": false,
-    "github": "https://github.com/gauthamdk/LeadAndLead",
-    "program": ""
+    "github": "https://github.com/gauthamdk/LeadAndLead"
   },
   {
     "id": 4,
@@ -44,7 +41,6 @@
       "Helped more than 20 students in the university to save time and track deadlines"
     ],
     "link": false,
-    "github": "https://github.com/gauthamdk/Deadliner",
-    "program": ""
+    "github": "https://github.com/gauthamdk/Deadliner"
   }
 ]
