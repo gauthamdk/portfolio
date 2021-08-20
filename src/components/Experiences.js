@@ -35,7 +35,6 @@ const Experiences = ({ exps }) => {
   return (
     <Container className="px-3 pb-4">
       <h1 className="secondary_color">Experiences</h1>
-      <hr size="4" />
       <Row>{experiences}</Row>
     </Container>
   );

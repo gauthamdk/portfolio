@@ -31,7 +31,6 @@ const Projects = ({ projs }) => {
   return (
     <Container className="px-3 pb-4">
       <h1 className="secondary_color">Projects</h1>
-      <hr size="4" />
       <Row>{projects}</Row>
     </Container>
   );
