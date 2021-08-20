@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Migration of Legacy application to AWS",
+    "description": [
+      "Migrated legacy Java application and MySQL database to AWS for scalability and elasticity",
+      "Containerized legacy application and dependencies using Docker to run on ECS with Fargate",
+      "Transferred data from local MySQL database to AWS RDS"
+    ],
+    "link": false,
+    "github": false,
+    "program": "Cloud Computing Project"
+  },
+  {
+    "id": 2,
+    "name": "eGrocery",
+    "description": [
+      "Built web application for ordering groceries remotely during the pandemic",
+      "Designed front‑end using HTML, CSS, JS with EJS templates and Bootstrap styling",
+      "Implemented backend with NodeJS, using PassportJS for authentication",
+      "Created MongoDB database to stored products, users, and orders with search and filter functions"
+    ],
+    "link": "http://egrocery-swe.herokuapp.com/",
+    "github": "https://github.com/gauthamdk/egrocery",
+    "program": ""
+  },
+  {
+    "id": 3,
+    "name": "LeapAndLead",
+    "description": [
+      "Implemented a tool to fly a parrot minidrone by using hand gestures only",
+      "Programmed interface using Python with the Drone SDK and Leap Motion SDK"
+    ],
+    "link": false,
+    "github": "https://github.com/gauthamdk/LeadAndLead",
+    "program": ""
+  },
+  {
+    "id": 4,
+    "name": "Deadliner",
+    "description": [
+      "Scraped university’s classes website using Selenium for Python to get due dates for assignments",
+      "Generated events automatically in Google Calendar with due date and set reminders with Google Calender API",
+      "Helped more than 20 students in the university to save time and track deadlines"
+    ],
+    "link": false,
+    "github": "https://github.com/gauthamdk/Deadliner",
+    "program": ""
+  }
+]
