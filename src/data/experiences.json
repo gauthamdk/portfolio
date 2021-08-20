@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "company": "Imagine Science Films - Labocine",
+    "position": "Software Engineer",
+    "achievements": [
+      "Created user profiles with the ability to feature playlists and hide profiles for over 20,000 users using handlebars",
+      "Utilized NodeJS to design platform to connect over 15,000 users and film‑makers at the Imagine Science Film Festival"
+    ],
+    "location": "New York - Remote",
+    "date": "June 2021 - Present",
+    "link": "https://www.labocine.com/habitat"
+  },
+  {
+    "id": 2,
+    "company": "Music and Sound Cultures (MaSC)",
+    "position": "Machine Learning Assistant",
+    "achievements": [
+      "Developed a transcriber for mridangam music using Python and Scipy with 89% accuracy using support vector machines",
+      "Segmented audio files based on energy threshold using Librosa to generate 1,300 clips for training and testing"
+    ],
+    "location": "Abu Dhabi, UAE",
+    "date": "March 2020 - April 2021",
+    "link": false
+  },
+  {
+    "id": 3,
+    "company": "Bamian Auto Parts",
+    "position": "Full Stack Web Developer",
+    "achievements": [
+      "Built a full‑stack web app using NodeJS, ReactJS, and ExpressJS to perform data analysis on weekly excel reports",
+      "Automated sales report generation using Python, reducing time taken by 90%",
+      "Modeled database using MongoDB to hold over 10,000 company records with search and filtering capabilities",
+      "Designed visualization platform with ChartJS to show monthly progress in sales"
+    ],
+    "location": "Abu Dhabi, UAE",
+    "date": "August 2020",
+    "link": false
+  },
+  {
+    "id": 4,
+    "company": "Modern Microprocessors Architecture (MoMa Lab)",
+    "position": "Research Intern",
+    "achievements": [
+      "Fine‑tuned machine learning tool to identify code/data sections in binary files using Python with 99% accuracy",
+      "Generated data for the model using one‑hot encoding with numpy and sparse matrices to reduce memory consumption"
+    ],
+    "location": "Abu Dhabi, UAE",
+    "date": "June 2020 - August 2020",
+    "link": false
+  }
+]
