@@ -18,7 +18,7 @@ const Skills = () => {
       setIsAnimated(entry.isIntersecting);
     }, options);
 
-    if (skillsRef.current) observer.observe(skillsRef.current);
+    if (skillsRef.current && !isAnimated) observer.observe(skillsRef.current);
 
     return () => {
       if (skillsRef.current) observer.unobserve(skillsRef.current);
