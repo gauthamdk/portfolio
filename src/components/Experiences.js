@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/body.scss";
 
@@ -16,7 +18,13 @@ const Experiences = ({ exps }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <h5 className="subtitle">{exp.company}</h5>
+              <h5 className="subtitle d-inline pe-2">{exp.company}</h5>
+              {exp.link ? (
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  className="subtitle"
+                ></FontAwesomeIcon>
+              ) : null}
             </a>
           </Col>
           <Col lg={3}>

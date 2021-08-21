@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Projects = ({ projs }) => {
   const projects = projs.map((proj) => {
@@ -12,7 +13,13 @@ const Projects = ({ projs }) => {
           target="_blank"
           rel="noreferrer"
         >
-          <h5 className="d-inline-block subtitle">{proj.name}</h5>
+          <h5 className="d-inline-block subtitle pe-2">{proj.name}</h5>
+          {proj.link ? (
+            <FontAwesomeIcon
+              icon={faExternalLinkAlt}
+              className="subtitle"
+            ></FontAwesomeIcon>
+          ) : null}
         </a>
         {proj.github ? (
           <a href={proj.github} className="d-inline-block px-2">
