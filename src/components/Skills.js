@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../styles/body.scss";
-import "../scripts/skills";
 
 const Skills = () => {
   const skillsRef = useRef(null);
