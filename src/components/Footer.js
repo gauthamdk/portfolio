@@ -6,7 +6,7 @@ import {
   faMedium,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faLink } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/body.scss";
 
@@ -15,6 +15,13 @@ const Footer = () => {
     <footer>
       <section className="d-flex justify-content-center p-4">
         <div>
+          <a href="mailto:gauthamkumar@nyu.edu" className="me-4 text-reset">
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              className="links_color"
+              size="lg"
+            ></FontAwesomeIcon>
+          </a>
           <a href="https://twitter.com/_gauthamdk" className="me-4 text-reset">
             <FontAwesomeIcon
               icon={faTwitter}
