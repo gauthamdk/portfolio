@@ -2,26 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-primary: #03dac5;
+    --color-primary-muted: #0fbdac;
+    --color-secondary: #f05d23;
+    --color-secondary-muted: #b84112;
+    --color-primary-text: #1a090d;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.links a:not(:first-child) {
+  @apply pl-2;
+}
+
+.links a {
+  @apply pr-2;
+}
+
+.links a p {
+  @apply pl-1 text-palette-primary-text;
+}
+
+.links a svg {
+  @apply text-palette-secondary text-2xl;
+}
+
+.links a:hover svg {
+  @apply text-palette-secondary-muted drop-shadow-lg transition duration-300;
+}
+
+.cat {
+  @apply p-3 px-5 text-left text-lg rounded-xl mt-5 border-none bg-palette-primary drop-shadow-md hover:drop-shadow-lg hover:bg-palette-primary-muted transition duration-200;
 }
