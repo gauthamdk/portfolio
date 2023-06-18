@@ -18,6 +18,7 @@ module.exports = {
       borderColor:{
         palette: {
           secondary: 'var(--color-secondary)',
+          "secondary-muted": 'var(--color-secondary-muted)',
         }
       },
       backgroundColor:{

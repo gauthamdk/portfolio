@@ -35,3 +35,7 @@
 .cat {
   @apply p-3 px-5 text-left text-lg rounded-xl mt-5 border-none bg-palette-primary drop-shadow-md hover:drop-shadow-lg hover:bg-palette-primary-muted transition duration-200;
 }
+
+.langs div {
+  @apply my-2 flex justify-center;
+}
