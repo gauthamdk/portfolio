@@ -369,14 +369,14 @@ export default function Portfolio() {
           </div>
           <div>
             <Image
-              src="/Python.png"
+              src="/python.png"
               width={40}
               height={50}
               alt="Python logo"
             ></Image>
           </div>
           <div>
-            <Image src="/SQL.png" width={45} height={50} alt="SQL logo"></Image>
+            <Image src="/sql.png" width={45} height={50} alt="SQL logo"></Image>
           </div>
           <div>
             <Image
@@ -388,7 +388,7 @@ export default function Portfolio() {
           </div>
           <div>
             <Image
-              src="/ExpressJS.png"
+              src="/Expressjs.png"
               width={60}
               height={50}
               alt="ExpressJS logo"
@@ -404,7 +404,7 @@ export default function Portfolio() {
           </div>
           <div>
             <Image
-              src="/Flask.png"
+              src="/flask.png"
               width={40}
               height={50}
               alt="Flask logo"
