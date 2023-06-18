@@ -10,7 +10,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="container mx-auto">
+    <main className="container sm:mx-auto mx-3">
       <div className="flex items-center justify-center h-screen">
         <div className="flex flex-col">
           <p className="text-6xl text-palette-primary">Hi, I'm</p>
@@ -22,11 +22,16 @@ export default function Home() {
 
           <div className="flex items-center">
             <button className="cat">
-              <a href="mailto:gautham.dkl@gmail.com">Let's Chat !</a>
+              <a
+                href="mailto:gautham.dkl@gmail.com"
+                className="text-2xl sm:text-xl"
+              >
+                Let's Chat !
+              </a>
             </button>
           </div>
 
-          <div className="flex mt-5 links">
+          <div className="md:flex mt-5 links grid grid-cols-2">
             <Link href="/portfolio" className="flex items-center">
               <HiDocumentText></HiDocumentText>
               <p>Portfolio</p>

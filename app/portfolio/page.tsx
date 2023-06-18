@@ -1,11 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import { FiExternalLink } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
 
 export default function Portfolio() {
   return (
     <main className="container mx-auto my-10">
       <div className="grid lg:grid-cols-2 grid-cols-1 mx-5">
-        <div className="mb-5">
+        <div className="mb-5 bullets">
           <p className="text-6xl text-palette-primary">Experiences</p>
           <hr className="border-palette-secondary"></hr>
 
@@ -60,7 +62,17 @@ export default function Portfolio() {
               Software Engineer Intern
             </p>
             <div className="flex justify-between text-palette-primary-text my-1">
-              <p className="text-lg">Imagine Science Films - Labocine</p>
+              <p className="text-lg">
+                <a
+                  href="https://www.labocine.com/habitat"
+                  className="flex items-center"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Labocine{" "}
+                  <FiExternalLink className="ml-2 text-palette-primary"></FiExternalLink>
+                </a>
+              </p>
               <p>June - August 2021</p>
             </div>
             <ul className="list-disc text-palette-primary-text [&>*]:mt-1">
@@ -155,7 +167,7 @@ export default function Portfolio() {
           <p className="text-6xl text-palette-primary">Projects</p>
           <hr className="border-palette-secondary"></hr>
 
-          <div className="my-3 mx-1">
+          <div className="my-3 mx-1 bullets">
             <p className="text-palette-secondary text-xl">
               Migration of Legacy application to AWS
             </p>
@@ -178,7 +190,15 @@ export default function Portfolio() {
           <hr></hr>
 
           <div className="my-3 mx-1">
-            <p className="text-palette-secondary text-xl">Gym Booking Bot</p>
+            <a
+              className="flex items-center"
+              href="https://github.com/gauthamdk/GymBookingAutomation"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="text-palette-secondary text-xl">Gym Booking Bot</p>
+              <AiFillGithub className="text-palette-primary ml-2 text-lg"></AiFillGithub>
+            </a>
             <ul className="list-disc text-palette-primary-text [&>*]:mt-1">
               <li>
                 Automated gym slot booking using <b>Selenium</b>, and{" "}
@@ -191,7 +211,15 @@ export default function Portfolio() {
           <hr></hr>
 
           <div className="my-3 mx-1">
-            <p className="text-palette-secondary text-xl">LeapAndLead</p>
+            <a
+              className="flex items-center"
+              href="https://github.com/gauthamdk/LeadAndLead"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="text-palette-secondary text-xl">LeadAndLead</p>
+              <AiFillGithub className="text-palette-primary ml-2 text-lg"></AiFillGithub>
+            </a>
             <ul className="list-disc text-palette-primary-text [&>*]:mt-1">
               <li>
                 Implemented a tool to fly a parrot minidrone by using hand
@@ -207,7 +235,15 @@ export default function Portfolio() {
           <hr></hr>
 
           <div className="my-3 mx-1">
-            <p className="text-palette-secondary text-xl">Deadliner</p>
+            <a
+              className="flex items-center"
+              href="https://github.com/gauthamdk/Deadliner"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="text-palette-secondary text-xl">Deadliner</p>
+              <AiFillGithub className="text-palette-primary ml-2 text-lg"></AiFillGithub>
+            </a>
             <ul className="list-disc text-palette-primary-text [&>*]:mt-1">
               <li>
                 Scraped university’s classes website using <b>Selenium</b> with{" "}
@@ -226,7 +262,7 @@ export default function Portfolio() {
 
           <div className="my-3 mx-1">
             <p className="text-palette-secondary text-xl">
-              HackAD President (CS Club)
+              HackAD (CS club) President [2022-2023]
             </p>
           </div>
 
@@ -237,10 +273,12 @@ export default function Portfolio() {
               href="https://intro.nyuadim.com/author/gdk244/"
               target="_blank"
               rel="noreferrer noopener"
+              className="flex items-center"
             >
               <p className="text-palette-secondary text-xl">
                 Interactive Media
               </p>
+              <FiExternalLink className="ml-2 text-palette-primary"></FiExternalLink>
             </a>
           </div>
         </div>
@@ -276,7 +314,7 @@ export default function Portfolio() {
             ></Image>
           </div>
           <div>
-            <Image src="/css.png" width={40} height={50} alt="CSS logo"></Image>
+            <Image src="/css.png" width={30} height={50} alt="CSS logo"></Image>
           </div>
           <div>
             <Image src="/js.png" width={80} height={50} alt="JS logo"></Image>
