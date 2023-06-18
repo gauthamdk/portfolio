@@ -317,7 +317,7 @@ export default function Portfolio() {
             <Image src="/css.png" width={30} height={50} alt="CSS logo"></Image>
           </div>
           <div>
-            <Image src="/js.png" width={80} height={50} alt="JS logo"></Image>
+            <Image src="/js.png" width={40} height={50} alt="JS logo"></Image>
           </div>
           <div>
             <Image
