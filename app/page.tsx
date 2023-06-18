@@ -13,7 +13,7 @@ export default function Home() {
     <main className="container sm:mx-auto mx-3">
       <div className="flex items-center justify-center h-screen">
         <div className="flex flex-col">
-          <p className="text-6xl text-palette-primary">Hi, I'm</p>
+          <p className="text-6xl text-palette-primary">Hi, I&apos;m</p>
           <p className="text-7xl text-palette-primary">Gautham Dinesh</p>
           <hr className="mt-5 border-palette-secondary"></hr>
           <p className="text-2xl mt-5 text-palette-primary-text">
@@ -26,7 +26,7 @@ export default function Home() {
                 href="mailto:gautham.dkl@gmail.com"
                 className="text-2xl sm:text-xl"
               >
-                Let's Chat !
+                Let&apos;s Chat !
               </a>
             </button>
           </div>
