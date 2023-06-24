@@ -7,24 +7,41 @@ import {
 } from "react-icons/ai";
 import { SiUpwork } from "react-icons/si";
 import Link from "next/link";
+import { US, GB, AE, IN, GH } from "country-flag-icons/react/3x2";
 
 export default function Home() {
   return (
     <main className="container sm:mx-auto mx-3">
       <div className="flex items-center justify-center h-screen">
         <div className="flex flex-col">
-          <p className="text-6xl text-palette-primary">Hi, I&apos;m</p>
-          <p className="text-7xl text-palette-primary">Gautham Dinesh</p>
+          <h1 className="text-6xl text-palette-primary">Hi, I&apos;m</h1>
+          <h1 className="text-7xl text-palette-primary">Gautham Dinesh</h1>
           <hr className="mt-5 border-palette-secondary"></hr>
-          <p className="text-2xl mt-5 text-palette-primary-text">
+          <h2 className="text-2xl mt-5 text-palette-primary-text">
             Software Engineer & Full Stack Developer
-          </p>
+          </h2>
 
+          <div className="mt-3 flex">
+            <IN title="India" className="w-5 mx-2 rounded-sm drop-shadow-md" />
+            <GH title="Ghana" className="w-5 mx-2 rounded-sm drop-shadow-md" />
+            <AE
+              title="United Arab Emirates"
+              className="w-5 mx-2 rounded-sm drop-shadow-md"
+            />
+            <US
+              title="United States"
+              className="w-5 mx-2 rounded-sm drop-shadow-md"
+            />
+            <GB
+              title="United Kingdom"
+              className="w-5 mx-2 rounded-sm drop-shadow-md outline-green-400 outline-none"
+            />
+          </div>
           <div className="flex items-center">
-            <button className="cat">
+            <button className="cta">
               <a
                 href="mailto:gautham.dkl@gmail.com"
-                className="text-2xl sm:text-xl"
+                className="text-2xl sm:text-xl text-white"
               >
                 Let&apos;s Chat !
               </a>

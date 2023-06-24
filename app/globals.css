@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --color-primary: #03dac5;
+    --color-primary: #0f9689;
     --color-primary-muted: #0fbdac;
     --color-secondary: #f05d23;
     --color-secondary-muted: #b84112;
@@ -32,7 +32,7 @@
   @apply text-palette-secondary-muted drop-shadow-lg transition duration-300;
 }
 
-.cat {
+.cta {
   @apply p-3 px-5 text-left text-lg rounded-xl mt-5 border-none bg-palette-primary drop-shadow-md hover:drop-shadow-lg hover:bg-palette-primary-muted transition duration-200;
 }
 

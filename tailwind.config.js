@@ -26,7 +26,13 @@ module.exports = {
           primary: 'var(--color-primary)',
           "primary-muted": 'var(--color-primary-muted)',
         }
+      },
+      outlineColor:{
+        green:{
+          400: 'var(--color-primary)',
+        }
       }
+
     },
   },
   plugins: [],

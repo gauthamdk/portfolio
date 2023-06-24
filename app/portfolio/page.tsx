@@ -8,7 +8,7 @@ export default function Portfolio() {
     <main className="container mx-auto my-10">
       <div className="grid lg:grid-cols-2 grid-cols-1 mx-5">
         <div className="mb-5 bullets">
-          <p className="text-6xl text-palette-primary">Experiences</p>
+          <h1 className="text-6xl text-palette-primary">Experiences</h1>
           <hr className="border-palette-secondary"></hr>
 
           <div className="my-3 mx-1">
@@ -164,7 +164,7 @@ export default function Portfolio() {
         </div>
 
         <div className="lg:ml-20">
-          <p className="text-6xl text-palette-primary">Projects</p>
+          <h1 className="text-6xl text-palette-primary">Projects</h1>
           <hr className="border-palette-secondary"></hr>
 
           <div className="my-3 mx-1 bullets">
@@ -257,7 +257,7 @@ export default function Portfolio() {
             </ul>
           </div>
 
-          <p className="text-6xl text-palette-primary">Misc</p>
+          <h3 className="text-5xl text-palette-primary">Misc</h3>
           <hr className="border-palette-secondary"></hr>
 
           <div className="my-3 mx-1">
@@ -285,9 +285,9 @@ export default function Portfolio() {
       </div>
 
       <div className="mx-5">
-        <p className="text-4xl text-palette-primary">
+        <h3 className="text-4xl text-palette-primary">
           Languages and Frameworks
-        </p>
+        </h3>
         <hr className="border-palette-secondary"></hr>
 
         <div className="langs mt-3 grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 items-center justify-center">
