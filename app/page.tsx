@@ -48,7 +48,7 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="md:flex mt-5 links grid grid-cols-2">
+          <div className="md:flex mt-2 links grid grid-cols-2">
             <Link href="/portfolio" className="flex items-center">
               <HiDocumentText></HiDocumentText>
               <p>Portfolio</p>
