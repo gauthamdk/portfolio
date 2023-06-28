@@ -169,6 +169,29 @@ export default function Portfolio() {
 
           <div className="my-3 mx-1 bullets">
             <p className="text-palette-secondary text-xl">
+              Multilingual Time Offset Interaction
+            </p>
+            <ul className="list-disc text-palette-primary-text [&>*]:mt-1">
+              <li>
+                Developed a multilingual virtual avatar interface for
+                asynchronous interaction
+              </li>
+              <li>
+                Utilized Google <b>Speech to Text</b>, and Google{" "}
+                <b>Translate</b> to generate subtitles in all supported
+                languages with <b>FastAPI</b> and <b>RabbitMQ </b>
+                microservices
+              </li>
+              <li>
+                Implemented Google's <b>LaBSE</b> for storing language agnostic
+                embeddings and calculating cosine similarity to return the best
+                match video
+              </li>
+            </ul>
+          </div>
+
+          <div className="my-3 mx-1 bullets">
+            <p className="text-palette-secondary text-xl">
               Migration of Legacy application to AWS
             </p>
             <ul className="list-disc text-palette-primary-text [&>*]:mt-1">
@@ -178,7 +201,7 @@ export default function Portfolio() {
               </li>
               <li>
                 Containerized legacy application and dependencies using{" "}
-                <b>Docker</b>
+                <b>Docker </b>
                 to run with <b>AWS Fargate</b>
               </li>
               <li>
@@ -247,7 +270,7 @@ export default function Portfolio() {
             <ul className="list-disc text-palette-primary-text [&>*]:mt-1">
               <li>
                 Scraped university’s classes website using <b>Selenium</b> with{" "}
-                <b>Python</b>
+                <b>Python </b>
                 to get due dates for assignments
               </li>
               <li>
@@ -257,7 +280,7 @@ export default function Portfolio() {
             </ul>
           </div>
 
-          <h3 className="text-5xl text-palette-primary">Misc</h3>
+          <h3 className="text-5xl text-palette-primary">Misc.</h3>
           <hr className="border-palette-secondary"></hr>
 
           <div className="my-3 mx-1">

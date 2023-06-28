@@ -34,7 +34,7 @@ export default function Home() {
             />
             <GB
               title="United Kingdom"
-              className="w-5 mx-2 rounded-sm drop-shadow-md outline-green-400 outline-none"
+              className="w-5 mx-2 rounded-sm drop-shadow-md outline-green-400 outline-none outline-3"
             />
           </div>
           <div className="flex items-center">
