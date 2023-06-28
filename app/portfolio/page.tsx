@@ -183,9 +183,9 @@ export default function Portfolio() {
                 microservices
               </li>
               <li>
-                Implemented Google's <b>LaBSE</b> for storing language agnostic
-                embeddings and calculating cosine similarity to return the best
-                match video
+                Implemented Google&apos;s <b>LaBSE</b> for storing language
+                agnostic embeddings and calculating cosine similarity to return
+                the best match video
               </li>
             </ul>
           </div>
