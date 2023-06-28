@@ -17,6 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link
+        rel="apple-touch-icon"
+        href="/apple-icon-icon.png"
+        type="image/png"
+        sizes="180x180"
+      />
       <Script
         id="google-tag"
         strategy="lazyOnload"
@@ -25,11 +31,11 @@ export default function RootLayout({
       />
       <Script strategy="lazyOnload" id="google-tag-config">
         {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
-`}
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+      `}
       </Script>
 
       <body className={poppins.className}>{children}</body>

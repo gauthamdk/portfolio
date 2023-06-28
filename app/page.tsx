@@ -14,7 +14,7 @@ export default function Home() {
     <main className="container sm:mx-auto mx-3">
       <div className="flex items-center justify-center h-screen">
         <div className="flex flex-col">
-          <h1 className="text-6xl text-palette-primary">Hi, I&apos;m</h1>
+          <h2 className="text-6xl text-palette-primary">Hi, I&apos;m</h2>
           <h1 className="text-7xl text-palette-primary">Gautham Dinesh</h1>
           <hr className="mt-5 border-palette-secondary"></hr>
           <h2 className="text-2xl mt-5 text-palette-primary-text">
