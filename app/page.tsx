@@ -149,12 +149,19 @@ export default function Home() {
           <TerminalPrompt>cat /etc/location</TerminalPrompt>
           <div className="command-output">
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs sm:text-sm leading-tight">
-              <span>🇮🇳 Kerala</span>
-              <span>🇦🇪 Abu Dhabi</span>
-              <span className="whitespace-nowrap">🇬🇭 Accra</span>
-              <span className="whitespace-nowrap">🇺🇸 New York</span>
+              <span className="text-[var(--terminal-success)]">🇮🇳 Kerala</span>
+              <span className="text-[var(--terminal-success)]">
+                🇦🇪 Abu Dhabi
+              </span>
               <span className="text-[var(--terminal-success)] whitespace-nowrap">
-                🇬🇧 London [current]
+                🇬🇭 Accra
+              </span>
+              <span className="text-[var(--terminal-success)] whitespace-nowrap">
+                🇺🇸 New York
+              </span>
+              <span className="text-white whitespace-nowrap">
+                🇬🇧 London{" "}
+                <span className="text-yellow-400 font-bold">[current]</span>
               </span>
             </div>
           </div>
