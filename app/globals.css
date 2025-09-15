@@ -77,12 +77,15 @@
 .file-listing {
   font-family: inherit;
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 1.6;
+  padding: 0.25rem 0;
 }
 
 @media (max-width: 640px) {
   .file-listing {
     font-size: 12px;
+    line-height: 1.7;
+    padding: 0.375rem 0;
   }
 }
 

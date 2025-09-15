@@ -100,18 +100,18 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[var(--terminal-bg)] text-[var(--terminal-text)] p-3 sm:p-6 max-w-6xl mx-auto">
+    <main className="min-h-screen bg-[var(--terminal-bg)] text-[var(--terminal-text)] p-4 sm:p-6 max-w-6xl mx-auto">
       {/* Header/Navigation */}
-      <header className="sticky top-0 bg-[var(--terminal-bg)] border-b border-gray-700 pb-4 mb-6 sm:mb-8 z-10">
+      <header className="sticky top-0 bg-[var(--terminal-bg)] border-b border-gray-700 pb-6 mb-8 sm:mb-10 z-10">
         <TerminalPrompt>
           <TypewriterText text="./portfolio --interactive" delay={200} />
         </TerminalPrompt>
-        <div className="flex flex-wrap gap-2 sm:gap-4 mt-4">
+        <div className="flex flex-wrap gap-3 sm:gap-4 mt-6">
           {commands.map((command, index) => (
             <button
               key={command.cmd}
               onClick={() => scrollToSection(command.section)}
-              className="terminal-command text-xs sm:text-sm hover:bg-gray-800/30 px-2 py-1 rounded whitespace-nowrap"
+              className="terminal-command text-sm hover:bg-gray-800/30 px-3 py-2 rounded whitespace-nowrap">
             >
               {command.cmd}
             </button>
@@ -120,40 +120,40 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section id="about" className="mb-12">
+      <section id="about" className="mb-10 sm:mb-12">
         <TerminalPrompt>whoami</TerminalPrompt>
         <div className="command-output">
-          <div className="text-2xl sm:text-3xl md:text-6xl font-bold mb-4">
+          <div className="text-2xl sm:text-3xl md:text-6xl font-bold mb-6">
             <TypewriterText text="GAUTHAM DINESH" delay={2000} />
           </div>
-          <div className="text-lg sm:text-xl md:text-2xl text-[var(--terminal-muted)] mb-6">
+          <div className="text-lg sm:text-xl md:text-2xl text-[var(--terminal-muted)] mb-8">
             SWEEEEEEEEE
           </div>
-          <div className="text-[var(--terminal-accent)] mb-4">
+          <div className="text-[var(--terminal-accent)] mb-6">
             Coding, Lifting, Living
           </div>
+        </div>
 
-          <div className="mt-6">
-            <TerminalPrompt>cat /etc/location</TerminalPrompt>
-            <div className="command-output">
-              <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-xs sm:text-sm">
-                <span>🇮🇳 India</span>
-                <span>🇦🇪 UAE (Dubai)</span>
-                <span className="whitespace-nowrap">
-                  🇳🇿 New Zealand (Auckland)
-                </span>
-                <span className="whitespace-nowrap">🇺🇸 USA (New York)</span>
-                <span className="text-[var(--terminal-success)] whitespace-nowrap">
-                  🇬🇧 UK (London - current)
-                </span>
-              </div>
+        <div className="mt-8">
+          <TerminalPrompt>cat /etc/location</TerminalPrompt>
+          <div className="command-output">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-sm leading-relaxed">
+              <span>🇮🇳 India</span>
+              <span>🇦🇪 UAE (Dubai)</span>
+              <span className="whitespace-nowrap">
+                🇳🇿 New Zealand (Auckland)
+              </span>
+              <span className="whitespace-nowrap">🇺🇸 USA (New York)</span>
+              <span className="text-[var(--terminal-success)] whitespace-nowrap">
+                🇬🇧 UK (London - current)
+              </span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="mb-8 sm:mb-12">
+      <section id="experience" className="mb-10 sm:mb-12">
         <TerminalPrompt>ls -la work/</TerminalPrompt>
         <div className="command-output">
           <div className="space-y-2">
@@ -202,7 +202,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="mb-8 sm:mb-12">
+      <section id="projects" className="mb-10 sm:mb-12">
         <TerminalPrompt>cat projects/</TerminalPrompt>
         <div className="command-output">
           <div className="space-y-2">
@@ -253,15 +253,15 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="mb-8 sm:mb-12">
+      <section id="skills" className="mb-10 sm:mb-12">
         <TerminalPrompt>npm list --depth=0</TerminalPrompt>
         <div className="command-output">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             <div>
               <div className="text-[var(--terminal-accent)] mb-2">
                 Languages
               </div>
-              <div className="space-y-1 text-sm">
+              <div className="space-y-2 text-sm leading-relaxed">
                 <div>├── Java</div>
                 <div>├── Python</div>
                 <div>├── JavaScript/TypeScript</div>
@@ -274,7 +274,7 @@ export default function Home() {
               <div className="text-[var(--terminal-accent)] mb-2">
                 Frameworks & Libraries
               </div>
-              <div className="space-y-1 text-sm">
+              <div className="space-y-2 text-sm leading-relaxed">
                 <div>├── Spring Boot</div>
                 <div>├── React/NextJS</div>
                 <div>├── Node.js/Express</div>
@@ -289,7 +289,7 @@ export default function Home() {
               <div className="text-[var(--terminal-accent)] mb-2">
                 Tools & Platforms
               </div>
-              <div className="space-y-1 text-sm">
+              <div className="space-y-2 text-sm leading-relaxed">
                 <div>├── AWS (ECS/ECR/Fargate/RDS)</div>
                 <div>├── Docker/Kubernetes</div>
                 <div>├── ArgoCD/Terraform</div>
@@ -304,7 +304,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="mb-8 sm:mb-12">
+      <section id="contact" className="mb-10 sm:mb-12">
         <TerminalPrompt>contact --info</TerminalPrompt>
         <div className="command-output">
           <div className="space-y-2">
@@ -346,7 +346,7 @@ export default function Home() {
               date="2025"
               name="twitter.url"
               type="file"
-              href="https://twitter.com/_gauthamdk"
+              href="https://twitter.com/0xzorog"
             />
           </div>
 
