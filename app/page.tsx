@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const TerminalPrompt = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-center mb-4">
-    <span className="terminal-prompt">gautham@portfolio:~$</span>
+    <span className="terminal-prompt">root@portfolio:~$</span>
     <span className="ml-2">{children}</span>
   </div>
 );
@@ -16,6 +16,7 @@ const FileItem = ({
   name,
   type = "file",
   href,
+  hideSizeOnMobile = false,
 }: {
   permissions: string;
   size: string;
@@ -23,11 +24,16 @@ const FileItem = ({
   name: string;
   type?: "file" | "directory" | "executable";
   href?: string;
+  hideSizeOnMobile?: boolean;
 }) => {
   const content = (
     <div className="file-listing flex items-center py-1 hover:bg-gray-800/30 px-2 rounded transition-colors">
       <span className="file-perm">{permissions}</span>
-      <span className="file-size">{size}</span>
+      <span
+        className={`file-size ${hideSizeOnMobile ? "hidden sm:inline" : ""}`}
+      >
+        {size}
+      </span>
       <span className="file-date">{date}</span>
       <span className={`file-name ${type}`}>{name}</span>
     </div>
@@ -104,7 +110,7 @@ export default function Home() {
       {/* Header/Navigation */}
       <header className="sticky top-0 bg-[var(--terminal-bg)] border-b border-gray-700 pb-6 mb-8 sm:mb-10 z-10">
         <TerminalPrompt>
-          <TypewriterText text="./portfolio --interactive" delay={200} />
+          <TypewriterText text="./portfolio -I" delay={200} />
         </TerminalPrompt>
         <div className="flex flex-wrap gap-2 sm:gap-3 mt-4">
           {commands.map((command, index) => (
@@ -124,7 +130,7 @@ export default function Home() {
         <TerminalPrompt>whoami</TerminalPrompt>
         <div className="command-output">
           <div className="text-xl sm:text-2xl md:text-4xl font-bold mb-4">
-            <TypewriterText text="GAUTHAM DINESH" delay={2000} />
+            <TypewriterText text="gautham dinesh" delay={1000} />
           </div>
           <div className="text-base sm:text-lg md:text-xl text-[var(--terminal-muted)] mb-6">
             SWEEEEEEEEE
@@ -159,8 +165,9 @@ export default function Home() {
               permissions="drwxr-xr-x"
               size="4.2KB"
               date="Jul 2023 - Present"
-              name="goldman-sachs/software-engineer/"
+              name="goldman-sachs/swe/"
               type="directory"
+              hideSizeOnMobile={true}
             />
 
             <FileItem
@@ -169,31 +176,35 @@ export default function Home() {
               date="Jul 2022 - Aug 2022"
               name="goldman-sachs/intern/"
               type="directory"
+              hideSizeOnMobile={true}
             />
 
             <FileItem
               permissions="drwxr-xr-x"
               size="1.8KB"
               date="Feb 2022 - Jun 2022"
-              name="keyper-real-estate/"
+              name="keyper-real-estate/swe"
               type="directory"
+              hideSizeOnMobile={true}
             />
 
             <FileItem
               permissions="drwxr-xr-x"
               size="1.5KB"
               date="Jun 2021 - Aug 2021"
-              name="imagine-science-films/"
+              name="imagine-science-films/intern"
               type="directory"
               href="https://www.labocine.com/habitat"
+              hideSizeOnMobile={true}
             />
 
             <FileItem
               permissions="drwxr-xr-x"
               size="1.2KB"
               date="Jul 2020 - Aug 2020"
-              name="bamian-auto-parts/"
+              name="bamian-auto-parts/contract"
               type="directory"
+              hideSizeOnMobile={true}
             />
           </div>
         </div>
@@ -352,7 +363,7 @@ export default function Home() {
         <div className="mt-6 pt-4 border-t border-gray-700">
           <TerminalPrompt>
             <span className="text-[var(--terminal-success)]">
-              Let&apos;s build something amazing together
+              Build with me
             </span>
           </TerminalPrompt>
         </div>
