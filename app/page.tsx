@@ -132,9 +132,6 @@ export default function Home() {
           <div className="text-xl sm:text-2xl md:text-4xl font-bold mb-4">
             <TypewriterText text="gautham dinesh" delay={1000} />
           </div>
-          <div className="text-base sm:text-lg md:text-xl text-[var(--terminal-muted)] mb-6">
-            SWEEEEEEEEE
-          </div>
           <div className="text-sm sm:text-base text-[var(--terminal-accent)] mb-4">
             Coding, Lifting, Living
           </div>

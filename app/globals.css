@@ -4,12 +4,12 @@
 
 @layer base {
   :root {
-    --terminal-bg: #0d1117;
-    --terminal-text: #c9d1d9;
-    --terminal-accent: #00d9ff;
-    --terminal-success: #7c3aed;
-    --terminal-muted: #6e7681;
-    --terminal-prompt: #58a6ff;
+    --terminal-bg: #1a1a1a;
+    --terminal-text: #f5f5dc;
+    --terminal-accent: #8b7355;
+    --terminal-success: #6b5b73;
+    --terminal-muted: #888888;
+    --terminal-prompt: #a0957e;
   }
 
   * {
@@ -153,7 +153,7 @@
   padding: 2rem;
   border: 1px solid var(--terminal-muted);
   border-radius: 4px;
-  background: rgba(13, 17, 23, 0.8);
+  background: rgba(26, 26, 26, 0.8);
 }
 
 /* Command output styling */
