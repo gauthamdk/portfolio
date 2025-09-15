@@ -1,9 +1,12 @@
 import { Metadata } from "next";
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Gautham Dinesh",
@@ -38,7 +41,7 @@ export default function RootLayout({
       `}
       </Script>
 
-      <body className={poppins.className}>{children}</body>
+      <body className={jetbrainsMono.className}>{children}</body>
     </html>
   );
 }

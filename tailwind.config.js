@@ -1,39 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      textColor: {
-        palette: {
-          primary: 'var(--color-primary)',
-          "primary-text": 'var(--color-primary-text)',
-          secondary: 'var(--color-secondary)',
-          "secondary-muted": 'var(--color-secondary-muted)',
-        }
+      colors: {
+        terminal: {
+          bg: "var(--terminal-bg)",
+          text: "var(--terminal-text)",
+          accent: "var(--terminal-accent)",
+          success: "var(--terminal-success)",
+          muted: "var(--terminal-muted)",
+          prompt: "var(--terminal-prompt)",
+        },
       },
-      borderColor:{
-        palette: {
-          secondary: 'var(--color-secondary)',
-          "secondary-muted": 'var(--color-secondary-muted)',
-        }
+      fontFamily: {
+        mono: ["JetBrains Mono", "SF Mono", "Consolas", "monospace"],
       },
-      backgroundColor:{
-        palette: {
-          primary: 'var(--color-primary)',
-          "primary-muted": 'var(--color-primary-muted)',
-        }
-      },
-      outlineColor:{
-        green:{
-          400: 'var(--color-primary)',
-        }
-      }
-
     },
   },
   plugins: [],
-}
+};

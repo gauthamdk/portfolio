@@ -4,46 +4,135 @@
 
 @layer base {
   :root {
-    --color-primary: #0f9689;
-    --color-primary-muted: #0fbdac;
-    --color-secondary: #f05d23;
-    --color-secondary-muted: #b84112;
-    --color-primary-text: #1a090d;
+    --terminal-bg: #0d1117;
+    --terminal-text: #c9d1d9;
+    --terminal-accent: #00d9ff;
+    --terminal-success: #7c3aed;
+    --terminal-muted: #6e7681;
+    --terminal-prompt: #58a6ff;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--terminal-bg);
+    color: var(--terminal-text);
+    line-height: 1.6;
   }
 }
 
-.links a:not(:first-child) {
-  @apply lg:pl-2;
+/* Terminal prompt styling */
+.terminal-prompt {
+  color: var(--terminal-prompt);
+  font-weight: 700;
 }
 
-.links a {
-  @apply pr-2 lg:mt-2 mt-4 mx-1;
+.terminal-command {
+  color: var(--terminal-accent);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.links a p {
-  @apply pl-1 text-palette-primary-text text-2xl md:text-base;
+.terminal-command:hover {
+  color: var(--terminal-success);
+  text-shadow: 0 0 5px currentColor;
 }
 
-.links a svg {
-  @apply text-palette-secondary text-2xl;
+/* Typewriter animation */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
-.links a:hover svg {
-  @apply text-palette-secondary-muted drop-shadow-lg transition duration-300;
+@keyframes blink {
+  0%,
+  50% {
+    border-color: var(--terminal-accent);
+  }
+  51%,
+  100% {
+    border-color: transparent;
+  }
 }
 
-.cta {
-  @apply p-3 px-5 text-left text-lg rounded-xl mt-5 border-none bg-palette-primary drop-shadow-md hover:drop-shadow-lg hover:bg-palette-primary-muted transition duration-200;
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--terminal-accent);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typewriter 2s steps(30, end), blink 1s step-end infinite;
 }
 
-.langs div {
-  @apply my-2 flex justify-center;
+/* File listing styles */
+.file-listing {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
-.bullets div ul li {
-  @apply text-sm;
+.file-perm {
+  color: var(--terminal-muted);
+  margin-right: 1rem;
 }
 
-.bullets ul li {
-  @apply text-sm;
+.file-size {
+  color: var(--terminal-muted);
+  margin-right: 1rem;
+  text-align: right;
+  width: 60px;
+  display: inline-block;
+}
+
+.file-date {
+  color: var(--terminal-muted);
+  margin-right: 1rem;
+}
+
+.file-name {
+  color: var(--terminal-text);
+}
+
+.file-name.executable {
+  color: var(--terminal-success);
+}
+
+.file-name.directory {
+  color: var(--terminal-accent);
+}
+
+/* Section styling */
+.terminal-section {
+  margin: 3rem 0;
+  padding: 2rem;
+  border: 1px solid var(--terminal-muted);
+  border-radius: 4px;
+  background: rgba(13, 17, 23, 0.8);
+}
+
+/* Command output styling */
+.command-output {
+  color: var(--terminal-text);
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+/* Links */
+.terminal-link {
+  color: var(--terminal-accent);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.terminal-link:hover {
+  color: var(--terminal-success);
 }
