@@ -80,26 +80,54 @@
   line-height: 1.4;
 }
 
+@media (max-width: 640px) {
+  .file-listing {
+    font-size: 12px;
+  }
+}
+
 .file-perm {
   color: var(--terminal-muted);
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .file-perm {
+    margin-right: 1rem;
+  }
 }
 
 .file-size {
   color: var(--terminal-muted);
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   text-align: right;
-  width: 60px;
+  width: 50px;
   display: inline-block;
+}
+
+@media (min-width: 640px) {
+  .file-size {
+    margin-right: 1rem;
+    width: 60px;
+  }
 }
 
 .file-date {
   color: var(--terminal-muted);
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+  font-size: 0.9em;
+}
+
+@media (min-width: 640px) {
+  .file-date {
+    margin-right: 1rem;
+    font-size: 1em;
+  }
 }
 
 .file-name {
   color: var(--terminal-text);
+  word-break: break-word;
 }
 
 .file-name.executable {
@@ -123,7 +151,13 @@
 .command-output {
   color: var(--terminal-text);
   margin: 1rem 0;
-  padding-left: 2rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 640px) {
+  .command-output {
+    padding-left: 2rem;
+  }
 }
 
 /* Links */
