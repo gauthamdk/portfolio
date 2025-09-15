@@ -124,10 +124,10 @@ export default function Home() {
             <TypewriterText text="GAUTHAM DINESH" delay={1000} />
           </div>
           <div className="text-xl md:text-2xl text-[var(--terminal-muted)] mb-6">
-            SOFTWARE ENGINEER & FULL STACK DEVELOPER
+            SOFTWARE ENGINEER @ GOLDMAN SACHS
           </div>
           <div className="text-[var(--terminal-accent)] mb-4">
-            Building scalable systems and beautiful interfaces
+            Automating financial systems & building scalable microservices
           </div>
 
           <div className="mt-6">
@@ -135,11 +135,11 @@ export default function Home() {
             <div className="command-output">
               <div className="flex items-center gap-2 text-sm">
                 <span>🇮🇳 India</span>
-                <span>🇬🇭 Ghana</span>
-                <span>🇦🇪 UAE</span>
-                <span>🇺🇸 USA</span>
+                <span>🇦🇪 UAE (Dubai)</span>
+                <span>🇳🇿 New Zealand (Auckland)</span>
+                <span>🇺🇸 USA (New York)</span>
                 <span className="text-[var(--terminal-success)]">
-                  🇬🇧 UK (current)
+                  🇬🇧 UK (London - current)
                 </span>
               </div>
             </div>
@@ -154,45 +154,44 @@ export default function Home() {
           <div className="space-y-2">
             <FileItem
               permissions="drwxr-xr-x"
-              size="2.1KB"
-              date="Aug 2022"
-              name="goldman-sachs/"
+              size="4.2KB"
+              date="Jul 2023 - Present"
+              name="goldman-sachs/software-engineer/"
               type="directory"
             />
-            <div className="pl-8 text-sm text-[var(--terminal-muted)]">
-              <div>• Built React applications for loan data visualization</div>
-              <div>• Designed Java Dropwizard APIs with SQL optimization</div>
-              <div>• Engineered CI/CD with Docker, Kubernetes, Terraform</div>
-            </div>
+
+            <FileItem
+              permissions="drwxr-xr-x"
+              size="2.1KB"
+              date="Jul 2022 - Aug 2022"
+              name="goldman-sachs/intern/"
+              type="directory"
+            />
 
             <FileItem
               permissions="drwxr-xr-x"
               size="1.8KB"
-              date="Jun 2022"
-              name="keyper/"
+              date="Feb 2022 - Jun 2022"
+              name="keyper-real-estate/"
               type="directory"
             />
-            <div className="pl-8 text-sm text-[var(--terminal-muted)]">
-              <div>• Designed Docusign + Airtable integration with NodeJS</div>
-              <div>• Built Onesignal notification systems with JavaScript</div>
-            </div>
 
             <FileItem
               permissions="drwxr-xr-x"
               size="1.5KB"
-              date="Aug 2021"
-              name="labocine/"
+              date="Jun 2021 - Aug 2021"
+              name="imagine-science-films/"
               type="directory"
               href="https://www.labocine.com/habitat"
             />
-            <div className="pl-8 text-sm text-[var(--terminal-muted)]">
-              <div>
-                • Created user profiles for 20,000+ users with Handlebars
-              </div>
-              <div>
-                • Connected 15,000+ users at Imagine Science Film Festival
-              </div>
-            </div>
+
+            <FileItem
+              permissions="drwxr-xr-x"
+              size="1.2KB"
+              date="Jul 2020 - Aug 2020"
+              name="bamian-auto-parts/"
+              type="directory"
+            />
           </div>
         </div>
       </section>
@@ -204,15 +203,11 @@ export default function Home() {
           <div className="space-y-2">
             <FileItem
               permissions="-rwxr-xr-x"
-              size="3.2KB"
-              date="2023"
-              name="multilingual-avatar-interface"
+              size="3.8KB"
+              date="May 2023"
+              name="multilingual-toia"
               type="executable"
             />
-            <div className="pl-8 text-sm text-[var(--terminal-muted)]">
-              Multilingual virtual avatar with Google Speech-to-Text, Translate,
-              and LaBSE embeddings
-            </div>
 
             <FileItem
               permissions="-rwxr-xr-x"
@@ -221,9 +216,6 @@ export default function Home() {
               name="aws-migration-pipeline"
               type="executable"
             />
-            <div className="pl-8 text-sm text-[var(--terminal-muted)]">
-              Legacy Java application migration to AWS with Docker and Fargate
-            </div>
 
             <FileItem
               permissions="-rwxr-xr-x"
@@ -233,9 +225,6 @@ export default function Home() {
               type="executable"
               href="https://github.com/gauthamdk/GymBookingAutomation"
             />
-            <div className="pl-8 text-sm text-[var(--terminal-muted)]">
-              Automated gym slot booking with Selenium and RaspberryPi
-            </div>
 
             <FileItem
               permissions="-rwxr-xr-x"
@@ -245,10 +234,6 @@ export default function Home() {
               type="executable"
               href="https://github.com/gauthamdk/LeadAndLead"
             />
-            <div className="pl-8 text-sm text-[var(--terminal-muted)]">
-              Hand gesture controlled drone interface using Python and Leap
-              Motion
-            </div>
 
             <FileItem
               permissions="-rwxr-xr-x"
@@ -258,10 +243,6 @@ export default function Home() {
               type="executable"
               href="https://github.com/gauthamdk/Deadliner"
             />
-            <div className="pl-8 text-sm text-[var(--terminal-muted)]">
-              Automated assignment tracking with Selenium and Google Calendar
-              API
-            </div>
           </div>
         </div>
       </section>
@@ -270,15 +251,15 @@ export default function Home() {
       <section id="skills" className="mb-12">
         <TerminalPrompt>npm list --depth=0</TerminalPrompt>
         <div className="command-output">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="text-[var(--terminal-accent)] mb-2">
                 Languages
               </div>
               <div className="space-y-1 text-sm">
-                <div>├── JavaScript/TypeScript</div>
-                <div>├── Python</div>
                 <div>├── Java</div>
+                <div>├── Python</div>
+                <div>├── JavaScript/TypeScript</div>
                 <div>├── C/C++</div>
                 <div>└── SQL</div>
               </div>
@@ -286,14 +267,31 @@ export default function Home() {
 
             <div>
               <div className="text-[var(--terminal-accent)] mb-2">
-                Frameworks & Tools
+                Frameworks & Libraries
               </div>
               <div className="space-y-1 text-sm">
-                <div>├── React/Next.js</div>
+                <div>├── Spring Boot</div>
+                <div>├── React/NextJS</div>
                 <div>├── Node.js/Express</div>
+                <div>├── Flask/Firebase</div>
+                <div>├── TensorFlow/Scipy</div>
+                <div>├── jQuery/p5js</div>
+                <div>└── Tailwind CSS</div>
+              </div>
+            </div>
+
+            <div>
+              <div className="text-[var(--terminal-accent)] mb-2">
+                Tools & Platforms
+              </div>
+              <div className="space-y-1 text-sm">
+                <div>├── AWS (ECS/ECR/Fargate/RDS)</div>
                 <div>├── Docker/Kubernetes</div>
-                <div>├── AWS/Terraform</div>
-                <div>└── MongoDB/PostgreSQL</div>
+                <div>├── ArgoCD/Terraform</div>
+                <div>├── MongoDB/Git</div>
+                <div>├── Selenium/Postman</div>
+                <div>├── Linux/Numpy</div>
+                <div>└── Matplotlib</div>
               </div>
             </div>
           </div>
@@ -312,6 +310,14 @@ export default function Home() {
               name="email.txt"
               type="file"
               href="mailto:gautham.dkl@gmail.com"
+            />
+            <FileItem
+              permissions="-rw-r--r--"
+              size="0.2KB"
+              date="2025"
+              name="website.url"
+              type="file"
+              href="https://gautham.dk"
             />
             <FileItem
               permissions="-rw-r--r--"
