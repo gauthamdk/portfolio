@@ -86,20 +86,46 @@
     font-size: 11px;
     line-height: 1.5;
     padding: 0.25rem 0;
+    display: block;
+  }
+
+  .file-listing .file-perm {
+    display: inline;
+    width: auto;
+    margin-right: 0.5rem;
+  }
+
+  .file-listing .file-size {
+    display: none;
+  }
+
+  .file-listing .file-date {
+    display: block;
+    width: auto;
+    margin: 0.125rem 0;
+    font-size: 0.8em;
+    opacity: 0.8;
+  }
+
+  .file-listing .file-name {
+    display: block;
+    margin-top: 0.125rem;
   }
 }
 
 .file-perm {
   color: var(--terminal-muted);
-  margin-right: 0.375rem;
-  width: 80px;
+  margin-right: 0.25rem;
+  width: 70px;
   display: inline-block;
+  font-size: 0.8em;
 }
 
 @media (min-width: 640px) {
   .file-perm {
     margin-right: 0.75rem;
     width: 90px;
+    font-size: inherit;
   }
 }
 
@@ -126,10 +152,13 @@
 
 .file-date {
   color: var(--terminal-muted);
-  margin-right: 0.375rem;
-  font-size: 0.85em;
-  width: 120px;
+  margin-right: 0.25rem;
+  font-size: 0.75em;
+  width: 90px;
   display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: 640px) {
@@ -137,6 +166,9 @@
     margin-right: 0.75rem;
     font-size: 0.9em;
     width: 140px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
   }
 }
 
