@@ -162,7 +162,7 @@ export default function Home() {
               permissions="drwxr-xr-x"
               size="4.2KB"
               date="Jul 2023 - Present"
-              name="goldman-sachs/swe/"
+              name="goldman-sachs/swe"
               type="directory"
             />
 
