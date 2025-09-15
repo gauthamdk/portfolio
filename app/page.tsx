@@ -342,7 +342,7 @@ export default function Home() {
           <div className="mt-6 pt-4 border-t border-gray-700">
             <TerminalPrompt>
               <span className="text-[var(--terminal-success)]">
-                Let's build something amazing together
+                Let&apos;s build something amazing together
               </span>
             </TerminalPrompt>
           </div>
