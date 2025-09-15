@@ -157,7 +157,7 @@
   color: var(--terminal-muted);
   margin-right: 0.25rem;
   font-size: 0.75em;
-  width: 90px;
+  width: 130px;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -168,10 +168,10 @@
   .file-date {
     margin-right: 0.75rem;
     font-size: 0.9em;
-    width: 140px;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
