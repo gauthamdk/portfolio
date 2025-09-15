@@ -60,12 +60,15 @@ const TypewriterText = ({
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (currentIndex < text.length) {
-        setDisplayText(text.slice(0, currentIndex + 1));
-        setCurrentIndex(currentIndex + 1);
-      }
-    }, delay + currentIndex * 50);
+    const timer = setTimeout(
+      () => {
+        if (currentIndex < text.length) {
+          setDisplayText(text.slice(0, currentIndex + 1));
+          setCurrentIndex(currentIndex + 1);
+        }
+      },
+      currentIndex === 0 ? delay : 50
+    );
 
     return () => clearTimeout(timer);
   }, [currentIndex, text, delay]);
@@ -101,7 +104,7 @@ export default function Home() {
       {/* Header/Navigation */}
       <header className="sticky top-0 bg-[var(--terminal-bg)] border-b border-gray-700 pb-4 mb-8 z-10">
         <TerminalPrompt>
-          <TypewriterText text="./portfolio --interactive" delay={500} />
+          <TypewriterText text="./portfolio --interactive" delay={200} />
         </TerminalPrompt>
         <div className="flex flex-wrap gap-4 mt-4">
           {commands.map((command, index) => (
@@ -120,14 +123,14 @@ export default function Home() {
       <section id="about" className="mb-12">
         <TerminalPrompt>whoami</TerminalPrompt>
         <div className="command-output">
-          <div className="text-4xl md:text-6xl font-bold mb-4">
-            <TypewriterText text="GAUTHAM DINESH" delay={1000} />
+          <div className="text-3xl md:text-6xl font-bold mb-4">
+            <TypewriterText text="GAUTHAM DINESH" delay={2000} />
           </div>
           <div className="text-xl md:text-2xl text-[var(--terminal-muted)] mb-6">
-            SOFTWARE ENGINEER @ GOLDMAN SACHS
+            SWEEEEEEEEE
           </div>
           <div className="text-[var(--terminal-accent)] mb-4">
-            Automating financial systems & building scalable microservices
+            Coding, Lifting, Living
           </div>
 
           <div className="mt-6">
