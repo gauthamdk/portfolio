@@ -96,7 +96,10 @@
   }
 
   .file-listing .file-size {
-    display: none;
+    display: inline;
+    width: auto;
+    margin-right: 0.5rem;
+    text-align: left;
   }
 
   .file-listing .file-date {

@@ -146,7 +146,7 @@ export default function Home() {
               <span className="whitespace-nowrap">🇬🇭 Accra</span>
               <span className="whitespace-nowrap">🇺🇸 New York</span>
               <span className="text-[var(--terminal-success)] whitespace-nowrap">
-                🇬🇧 London - current
+                🇬🇧 London [current]
               </span>
             </div>
           </div>
@@ -164,7 +164,6 @@ export default function Home() {
               date="Jul 2023 - Present"
               name="goldman-sachs/swe/"
               type="directory"
-              hideSizeOnMobile={true}
             />
 
             <FileItem
@@ -173,7 +172,6 @@ export default function Home() {
               date="Jul 2022 - Aug 2022"
               name="goldman-sachs/intern/"
               type="directory"
-              hideSizeOnMobile={true}
             />
 
             <FileItem
@@ -182,7 +180,6 @@ export default function Home() {
               date="Feb 2022 - Jun 2022"
               name="keyper-real-estate/swe"
               type="directory"
-              hideSizeOnMobile={true}
             />
 
             <FileItem
@@ -192,7 +189,6 @@ export default function Home() {
               name="imagine-science-films/intern"
               type="directory"
               href="https://www.labocine.com/habitat"
-              hideSizeOnMobile={true}
             />
 
             <FileItem
@@ -201,7 +197,6 @@ export default function Home() {
               date="Jul 2020 - Aug 2020"
               name="bamian-auto-parts/contract"
               type="directory"
-              hideSizeOnMobile={true}
             />
           </div>
         </div>
