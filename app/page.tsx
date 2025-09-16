@@ -134,7 +134,10 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section id="about" className="mb-10 sm:mb-12">
+      <section
+        id="about"
+        className="mb-10 sm:mb-12 p-6 rounded-lg bg-gray-900/30 border border-gray-800/50"
+      >
         <TerminalPrompt>whoami</TerminalPrompt>
         <div className="command-output">
           <div className="text-xl sm:text-2xl md:text-4xl font-bold mb-4">
@@ -169,7 +172,10 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="mb-8 sm:mb-10">
+      <section
+        id="experience"
+        className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-800/20 border border-gray-700/50"
+      >
         <TerminalPrompt>ls -la work/</TerminalPrompt>
         <div className="command-output">
           <div className="space-y-1">
@@ -218,7 +224,10 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="mb-8 sm:mb-10">
+      <section
+        id="projects"
+        className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-900/40 border border-gray-800/60"
+      >
         <TerminalPrompt>ls -ls projects/</TerminalPrompt>
         <div className="command-output">
           <div className="space-y-1">
@@ -287,7 +296,10 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="mb-8 sm:mb-10">
+      <section
+        id="skills"
+        className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-800/30 border border-gray-700/60"
+      >
         <TerminalPrompt>npm list --depth=0</TerminalPrompt>
         <div className="command-output">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
@@ -338,7 +350,10 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="mb-8 sm:mb-10">
+      <section
+        id="contact"
+        className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-900/50 border border-gray-800/70"
+      >
         <TerminalPrompt>contact --info</TerminalPrompt>
         <div className="command-output">
           <div className="space-y-1">

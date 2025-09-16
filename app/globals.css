@@ -195,6 +195,12 @@
   border: 1px solid var(--terminal-muted);
   border-radius: 4px;
   background: rgba(26, 26, 26, 0.8);
+  transition: all 0.3s ease;
+}
+
+.terminal-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Command output styling */
@@ -219,4 +225,42 @@
 
 .terminal-link:hover {
   color: var(--terminal-success);
+}
+
+/* Enhanced section backgrounds */
+section {
+  position: relative;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(1px);
+}
+
+section:hover {
+  backdrop-filter: blur(2px);
+}
+
+/* Section dividers */
+section::after {
+  content: "";
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--terminal-muted),
+    transparent
+  );
+  opacity: 0.3;
+}
+
+section:last-of-type::after {
+  display: none;
+}
+
+/* Subtle glow effect on section borders */
+section {
+  box-shadow: 0 0 0 1px rgba(139, 115, 85, 0.1), 0 2px 8px rgba(0, 0, 0, 0.2);
 }
