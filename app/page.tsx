@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const TerminalPrompt = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-center mb-4">
     <span className="terminal-prompt">root@portfolio:~$</span>
-    <span className="ml-2">{children}</span>
+    <span className="ml-1 sm:ml-2">{children}</span>
   </div>
 );
 

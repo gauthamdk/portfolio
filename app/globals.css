@@ -35,6 +35,30 @@
   filter: brightness(1.1);
 }
 
+/* Mobile terminal prompt styling */
+@media (max-width: 640px) {
+  .terminal-prompt {
+    font-size: 0.9rem;
+  }
+
+  .terminal-prompt-wrapper {
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .terminal-prompt {
+    font-size: 0.9rem;
+  }
+
+  .terminal-prompt-wrapper {
+    font-size: 0.9rem;
+  }
+}
+
 /* Terminal prompt wrapper for enhanced styling */
 .terminal-prompt-wrapper {
   padding: 0.5rem 0;
