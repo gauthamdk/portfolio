@@ -113,13 +113,14 @@ export default function Home() {
       }
     );
 
-    if (buildWithMeRef.current) {
-      observer.observe(buildWithMeRef.current);
+    const currentRef = buildWithMeRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (buildWithMeRef.current) {
-        observer.unobserve(buildWithMeRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
@@ -141,6 +142,14 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[var(--terminal-bg)] text-[var(--terminal-text)] p-2 sm:p-6 max-w-6xl mx-auto">
+      {/* Skip Navigation */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
+
       {/* Header/Navigation */}
       <header className="sticky top-0 bg-[var(--terminal-bg)] border-b border-gray-700 pb-6 mb-8 sm:mb-10 z-10">
         <TerminalPrompt>
@@ -163,17 +172,25 @@ export default function Home() {
       <section
         id="about"
         className="mb-10 sm:mb-12 p-3 sm:p-6 rounded-lg bg-gray-900/30 border border-gray-800/50"
+        aria-labelledby="main-heading"
       >
+        <div id="main-content"></div>
         <div className="terminal-prompt-wrapper">
           <TerminalPrompt>whoami</TerminalPrompt>
         </div>
         <div className="command-output">
-          <div className="text-xl sm:text-2xl md:text-4xl font-bold mb-4">
+          <h1
+            id="main-heading"
+            className="text-xl sm:text-2xl md:text-4xl font-bold mb-4"
+          >
             <TypewriterText text="gautham dinesh" delay={1000} />
-          </div>
-          <div className="text-sm sm:text-base text-[var(--terminal-accent)] mb-4">
-            Coding, Lifting, Living
-          </div>
+          </h1>
+          <p
+            className="text-sm sm:text-base text-[var(--terminal-accent)] mb-4"
+            role="doc-subtitle"
+          >
+            Create. Lift. Innovate.
+          </p>
         </div>
 
         <div className="mt-6">
@@ -181,20 +198,34 @@ export default function Home() {
             <TerminalPrompt>cat /etc/location</TerminalPrompt>
           </div>
           <div className="command-output">
-            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs sm:text-sm leading-tight">
-              <span className="text-[var(--terminal-success)]">🇮🇳 Kerala</span>
-              <span className="text-[var(--terminal-success)]">
+            <div
+              className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs sm:text-sm leading-tight"
+              role="list"
+              aria-label="Location history"
+            >
+              <span className="text-[var(--terminal-success)]" role="listitem">
+                🇮🇳 Kerala
+              </span>
+              <span className="text-[var(--terminal-success)]" role="listitem">
                 🇦🇪 Abu Dhabi
               </span>
-              <span className="text-[var(--terminal-success)] whitespace-nowrap">
+              <span
+                className="text-[var(--terminal-success)] whitespace-nowrap"
+                role="listitem"
+              >
                 🇬🇭 Accra
               </span>
-              <span className="text-[var(--terminal-success)] whitespace-nowrap">
+              <span
+                className="text-[var(--terminal-success)] whitespace-nowrap"
+                role="listitem"
+              >
                 🇺🇸 New York
               </span>
-              <span className="text-white whitespace-nowrap">
+              <span className="text-white whitespace-nowrap" role="listitem">
                 🇬🇧 London{" "}
-                <span className="text-yellow-400 font-bold">[current]</span>
+                <span className="text-yellow-400 font-bold">
+                  [current location]
+                </span>
               </span>
             </div>
           </div>
@@ -206,6 +237,7 @@ export default function Home() {
         id="experience"
         className="mb-8 sm:mb-10 p-3 sm:p-6 rounded-lg bg-gray-800/20 border border-gray-700/50"
       >
+        <h2 className="sr-only">Work Experience</h2>
         <div className="terminal-prompt-wrapper">
           <TerminalPrompt>ls -la work/</TerminalPrompt>
         </div>
@@ -260,6 +292,7 @@ export default function Home() {
         id="projects"
         className="mb-8 sm:mb-10 p-3 sm:p-6 rounded-lg bg-gray-900/40 border border-gray-800/60"
       >
+        <h2 className="sr-only">Projects</h2>
         <div className="terminal-prompt-wrapper">
           <TerminalPrompt>ls -ls projects/</TerminalPrompt>
         </div>
@@ -334,6 +367,7 @@ export default function Home() {
         id="skills"
         className="mb-8 sm:mb-10 p-3 sm:p-6 rounded-lg bg-gray-800/30 border border-gray-700/60"
       >
+        <h2 className="sr-only">Technical Skills</h2>
         <div className="terminal-prompt-wrapper">
           <TerminalPrompt>npm list --depth=0</TerminalPrompt>
         </div>
@@ -390,6 +424,7 @@ export default function Home() {
         id="contact"
         className="mb-8 sm:mb-10 p-3 sm:p-6 rounded-lg bg-gray-900/50 border border-gray-800/70"
       >
+        <h2 className="sr-only">Contact Information</h2>
         <div className="terminal-prompt-wrapper">
           <TerminalPrompt>contact --info</TerminalPrompt>
         </div>
