@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Gautham Dinesh" }],
   creator: "Gautham Dinesh",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -69,12 +73,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <link
-        rel="apple-touch-icon"
-        href="/apple-icon-icon.png"
-        type="image/png"
-        sizes="180x180"
-      />
       <Script
         id="google-tag"
         strategy="lazyOnload"
