@@ -118,7 +118,7 @@ export default function Home() {
       {/* Header/Navigation */}
       <header className="sticky top-0 bg-[var(--terminal-bg)] border-b border-gray-700 pb-6 mb-8 sm:mb-10 z-10">
         <TerminalPrompt>
-          <TypewriterText text="./portfolio -I" delay={200} />
+          <TypewriterText text="./portfolio" delay={200} />
         </TerminalPrompt>
         <div className="flex flex-wrap gap-2 sm:gap-3 mt-4">
           {commands.map((command, index) => (
