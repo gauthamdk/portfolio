@@ -6,10 +6,10 @@
   :root {
     --terminal-bg: #1a1a1a;
     --terminal-text: #f5f5dc;
-    --terminal-accent: #8b7355;
-    --terminal-success: #6b5b73;
-    --terminal-muted: #888888;
-    --terminal-prompt: #a0957e;
+    --terminal-accent: #d4a574;
+    --terminal-success: #a084b3;
+    --terminal-muted: #b8b8b8;
+    --terminal-prompt: #c4b896;
   }
 
   * {
