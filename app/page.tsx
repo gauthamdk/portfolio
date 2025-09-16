@@ -138,7 +138,9 @@ export default function Home() {
         id="about"
         className="mb-10 sm:mb-12 p-6 rounded-lg bg-gray-900/30 border border-gray-800/50"
       >
-        <TerminalPrompt>whoami</TerminalPrompt>
+        <div className="terminal-prompt-wrapper">
+          <TerminalPrompt>whoami</TerminalPrompt>
+        </div>
         <div className="command-output">
           <div className="text-xl sm:text-2xl md:text-4xl font-bold mb-4">
             <TypewriterText text="gautham dinesh" delay={1000} />
@@ -149,7 +151,9 @@ export default function Home() {
         </div>
 
         <div className="mt-6">
-          <TerminalPrompt>cat /etc/location</TerminalPrompt>
+          <div className="terminal-prompt-wrapper">
+            <TerminalPrompt>cat /etc/location</TerminalPrompt>
+          </div>
           <div className="command-output">
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs sm:text-sm leading-tight">
               <span className="text-[var(--terminal-success)]">🇮🇳 Kerala</span>
@@ -176,7 +180,9 @@ export default function Home() {
         id="experience"
         className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-800/20 border border-gray-700/50"
       >
-        <TerminalPrompt>ls -la work/</TerminalPrompt>
+        <div className="terminal-prompt-wrapper">
+          <TerminalPrompt>ls -la work/</TerminalPrompt>
+        </div>
         <div className="command-output">
           <div className="space-y-1">
             <FileItem
@@ -228,7 +234,9 @@ export default function Home() {
         id="projects"
         className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-900/40 border border-gray-800/60"
       >
-        <TerminalPrompt>ls -ls projects/</TerminalPrompt>
+        <div className="terminal-prompt-wrapper">
+          <TerminalPrompt>ls -ls projects/</TerminalPrompt>
+        </div>
         <div className="command-output">
           <div className="space-y-1">
             <FileItem
@@ -300,7 +308,9 @@ export default function Home() {
         id="skills"
         className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-800/30 border border-gray-700/60"
       >
-        <TerminalPrompt>npm list --depth=0</TerminalPrompt>
+        <div className="terminal-prompt-wrapper">
+          <TerminalPrompt>npm list --depth=0</TerminalPrompt>
+        </div>
         <div className="command-output">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             <div>
@@ -354,7 +364,9 @@ export default function Home() {
         id="contact"
         className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-900/50 border border-gray-800/70"
       >
-        <TerminalPrompt>contact --info</TerminalPrompt>
+        <div className="terminal-prompt-wrapper">
+          <TerminalPrompt>contact --info</TerminalPrompt>
+        </div>
         <div className="command-output">
           <div className="space-y-1">
             <FileItem
@@ -401,11 +413,13 @@ export default function Home() {
         </div>
 
         <div className="mt-6 pt-4 border-t border-gray-700">
-          <TerminalPrompt>
-            <span className="text-[var(--terminal-success)]">
-              Build with me
-            </span>
-          </TerminalPrompt>
+          <div className="terminal-prompt-wrapper">
+            <TerminalPrompt>
+              <span className="text-[var(--terminal-success)]">
+                Build with me
+              </span>
+            </TerminalPrompt>
+          </div>
         </div>
       </section>
 

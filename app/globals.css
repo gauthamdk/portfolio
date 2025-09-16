@@ -31,6 +31,14 @@
 .terminal-prompt {
   color: var(--terminal-prompt);
   font-weight: 700;
+  text-shadow: 0 0 4px rgba(160, 149, 126, 0.3);
+  filter: brightness(1.1);
+}
+
+/* Terminal prompt wrapper for enhanced styling */
+.terminal-prompt-wrapper {
+  padding: 0.5rem 0;
+  margin-bottom: 0.75rem;
 }
 
 .terminal-command {
@@ -207,7 +215,8 @@
 .command-output {
   color: var(--terminal-text);
   margin: 0.75rem 0;
-  padding-left: 0.75rem;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 @media (min-width: 640px) {
