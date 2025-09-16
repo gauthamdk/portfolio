@@ -243,6 +243,12 @@
   margin-top: 0.5rem;
 }
 
+@media (max-width: 639px) {
+  .command-output {
+    padding-left: 0.75rem;
+  }
+}
+
 @media (min-width: 640px) {
   .command-output {
     padding-left: 1.5rem;

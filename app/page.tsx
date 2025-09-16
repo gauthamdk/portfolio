@@ -114,7 +114,7 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-[var(--terminal-bg)] text-[var(--terminal-text)] p-4 sm:p-6 max-w-6xl mx-auto">
+    <main className="min-h-screen bg-[var(--terminal-bg)] text-[var(--terminal-text)] p-2 sm:p-6 max-w-6xl mx-auto">
       {/* Header/Navigation */}
       <header className="sticky top-0 bg-[var(--terminal-bg)] border-b border-gray-700 pb-6 mb-8 sm:mb-10 z-10">
         <TerminalPrompt>
@@ -136,7 +136,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="about"
-        className="mb-10 sm:mb-12 p-6 rounded-lg bg-gray-900/30 border border-gray-800/50"
+        className="mb-10 sm:mb-12 p-3 sm:p-6 rounded-lg bg-gray-900/30 border border-gray-800/50"
       >
         <div className="terminal-prompt-wrapper">
           <TerminalPrompt>whoami</TerminalPrompt>
@@ -178,7 +178,7 @@ export default function Home() {
       {/* Experience Section */}
       <section
         id="experience"
-        className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-800/20 border border-gray-700/50"
+        className="mb-8 sm:mb-10 p-3 sm:p-6 rounded-lg bg-gray-800/20 border border-gray-700/50"
       >
         <div className="terminal-prompt-wrapper">
           <TerminalPrompt>ls -la work/</TerminalPrompt>
@@ -232,7 +232,7 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-900/40 border border-gray-800/60"
+        className="mb-8 sm:mb-10 p-3 sm:p-6 rounded-lg bg-gray-900/40 border border-gray-800/60"
       >
         <div className="terminal-prompt-wrapper">
           <TerminalPrompt>ls -ls projects/</TerminalPrompt>
@@ -306,7 +306,7 @@ export default function Home() {
       {/* Skills Section */}
       <section
         id="skills"
-        className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-800/30 border border-gray-700/60"
+        className="mb-8 sm:mb-10 p-3 sm:p-6 rounded-lg bg-gray-800/30 border border-gray-700/60"
       >
         <div className="terminal-prompt-wrapper">
           <TerminalPrompt>npm list --depth=0</TerminalPrompt>
@@ -362,7 +362,7 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="mb-8 sm:mb-10 p-6 rounded-lg bg-gray-900/50 border border-gray-800/70"
+        className="mb-8 sm:mb-10 p-3 sm:p-6 rounded-lg bg-gray-900/50 border border-gray-800/70"
       >
         <div className="terminal-prompt-wrapper">
           <TerminalPrompt>contact --info</TerminalPrompt>
