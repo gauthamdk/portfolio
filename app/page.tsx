@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const TerminalPrompt = ({ children }: { children: React.ReactNode }) => (
   <div className="flex items-center mb-4">
@@ -89,6 +89,8 @@ const TypewriterText = ({
 
 export default function Home() {
   const [currentCommand, setCurrentCommand] = useState("");
+  const [isBuildWithMeVisible, setIsBuildWithMeVisible] = useState(false);
+  const buildWithMeRef = useRef<HTMLDivElement>(null);
 
   const commands = [
     { cmd: "whoami", section: "about" },
@@ -97,6 +99,30 @@ export default function Home() {
     { cmd: "npm list", section: "skills" },
     { cmd: "contact --info", section: "contact" },
   ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsBuildWithMeVisible(true);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "-50px 0px -50px 0px",
+      }
+    );
+
+    if (buildWithMeRef.current) {
+      observer.observe(buildWithMeRef.current);
+    }
+
+    return () => {
+      if (buildWithMeRef.current) {
+        observer.unobserve(buildWithMeRef.current);
+      }
+    };
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -413,9 +439,13 @@ export default function Home() {
         </div>
 
         <div className="mt-6 pt-4 border-t border-gray-700">
-          <div className="terminal-prompt-wrapper">
+          <div ref={buildWithMeRef} className="terminal-prompt-wrapper">
             <TerminalPrompt>
-              <span className="text-[var(--terminal-success)]">
+              <span
+                className={`text-[var(--terminal-success)] build-with-me-text ${
+                  isBuildWithMeVisible ? "glow-once" : ""
+                }`}
+              >
                 Build with me
               </span>
             </TerminalPrompt>
