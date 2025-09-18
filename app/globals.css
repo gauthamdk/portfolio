@@ -322,9 +322,63 @@ section {
   }
 }
 
-/* Consultation form styles */
-.consultation-form {
-  transform-origin: top;
+/* Consultation form modal styles */
+.consultation-form-modal {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.consultation-form-modal .bg-gray-900\/95 {
+  animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Ensure modal is properly positioned */
+.consultation-form-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal content scrolling */
+.consultation-form-modal .overflow-y-auto {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.consultation-form-modal .overflow-y-auto::-webkit-scrollbar {
+  width: 6px;
+}
+
+.consultation-form-modal .overflow-y-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.consultation-form-modal .overflow-y-auto::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 3px;
+}
+
+.consultation-form-modal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.7);
 }
 
 .consultation-form input:focus,
