@@ -476,3 +476,21 @@ section {
     transform: translateY(0);
   }
 }
+
+/* Persistent text glow effect */
+.button-glow {
+  animation: persistentTextGlow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 8px rgba(160, 132, 179, 0.6),
+    0 0 16px rgba(160, 132, 179, 0.4), 0 0 24px rgba(160, 132, 179, 0.2);
+}
+
+@keyframes persistentTextGlow {
+  0% {
+    text-shadow: 0 0 8px rgba(160, 132, 179, 0.6),
+      0 0 16px rgba(160, 132, 179, 0.4), 0 0 24px rgba(160, 132, 179, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 12px rgba(160, 132, 179, 0.9),
+      0 0 20px rgba(160, 132, 179, 0.6), 0 0 28px rgba(160, 132, 179, 0.3);
+  }
+}

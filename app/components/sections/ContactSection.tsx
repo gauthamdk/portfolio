@@ -6,6 +6,7 @@ import { useIntersectionObserver } from "../../hooks";
 
 export const ContactSection = () => {
   const [isConsultationFormOpen, setIsConsultationFormOpen] = useState(false);
+  const [hasBeenClicked, setHasBeenClicked] = useState(false);
   const { isVisible: isBuildWithMeVisible, elementRef: buildWithMeRef } =
     useIntersectionObserver();
 
@@ -67,9 +68,12 @@ export const ContactSection = () => {
         <div ref={buildWithMeRef} className="terminal-prompt-wrapper">
           <TerminalPrompt>
             <button
-              onClick={() => setIsConsultationFormOpen(!isConsultationFormOpen)}
+              onClick={() => {
+                setHasBeenClicked(true);
+                setIsConsultationFormOpen(!isConsultationFormOpen);
+              }}
               className={`text-[var(--terminal-success)] build-with-me-text hover:text-[var(--terminal-accent)] transition-all duration-300 cursor-pointer ${
-                isBuildWithMeVisible ? "glow-once" : ""
+                isBuildWithMeVisible && !hasBeenClicked ? "button-glow" : ""
               }`}
             >
               Build with me 🚀
