@@ -18,7 +18,13 @@ export const FileItem = ({
   hideSizeOnMobile = false,
 }: FileItemProps) => {
   const content = (
-    <div className="file-listing flex items-center py-1 hover:bg-gray-800/30 px-2 rounded transition-colors">
+    <div
+      className={`file-listing flex items-center py-1 px-2 rounded transition-colors ${
+        href
+          ? "hover:bg-gray-800/30 cursor-pointer group"
+          : "hover:bg-gray-800/20"
+      }`}
+    >
       <span className="file-perm">{permissions}</span>
       <span
         className={`file-size ${hideSizeOnMobile ? "hidden sm:inline" : ""}`}
@@ -26,7 +32,23 @@ export const FileItem = ({
         {size}
       </span>
       <span className="file-date">{date}</span>
-      <span className={`file-name ${type}`}>{name}</span>
+      <span
+        className={`file-name ${type} ${
+          href ? "group-hover:text-blue-400 transition-colors" : ""
+        }`}
+      >
+        {name}
+        {href && (
+          <>
+            <span className="ml-1 text-xs opacity-50 group-hover:opacity-100 transition-opacity">
+              •
+            </span>
+            <span className="ml-1 text-xs opacity-70 group-hover:opacity-100 transition-opacity">
+              ↗
+            </span>
+          </>
+        )}
+      </span>
     </div>
   );
 
@@ -37,6 +59,7 @@ export const FileItem = ({
         target="_blank"
         rel="noopener noreferrer"
         className="block"
+        title={`Open ${name} in new tab`}
       >
         {content}
       </a>

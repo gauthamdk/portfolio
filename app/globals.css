@@ -220,6 +220,30 @@
   color: var(--terminal-accent);
 }
 
+/* External link indicators */
+.file-listing.group {
+  position: relative;
+}
+
+.file-listing.group:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-left: 2px solid rgba(59, 130, 246, 0.5);
+}
+
+.file-listing.group .file-name {
+  position: relative;
+}
+
+.file-listing.group .file-name span[title*="Open"] {
+  font-weight: 600;
+  color: #60a5fa;
+}
+
+.file-listing.group .file-name span:first-of-type {
+  color: #60a5fa;
+  font-weight: bold;
+}
+
 /* Section styling */
 .terminal-section {
   margin: 3rem 0;
