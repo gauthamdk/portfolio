@@ -1,4 +1,5 @@
 import { TerminalPrompt, TypewriterText } from "../ui";
+import { IN, AE, GH, US, GB } from "country-flag-icons/react/3x2";
 
 export const HeroSection = () => {
   return (
@@ -36,26 +37,40 @@ export const HeroSection = () => {
             role="list"
             aria-label="Location history"
           >
-            <span className="text-[var(--terminal-success)]" role="listitem">
-              🇮🇳 Kerala
-            </span>
-            <span className="text-[var(--terminal-success)]" role="listitem">
-              🇦🇪 Abu Dhabi
-            </span>
             <span
-              className="text-[var(--terminal-success)] whitespace-nowrap"
+              className="text-[var(--terminal-success)] flex items-center gap-1"
               role="listitem"
             >
-              🇬🇭 Accra
+              <IN className="w-4 h-3" title="India" />
+              Kerala
             </span>
             <span
-              className="text-[var(--terminal-success)] whitespace-nowrap"
+              className="text-[var(--terminal-success)] flex items-center gap-1"
               role="listitem"
             >
-              🇺🇸 New York
+              <AE className="w-4 h-3" title="United Arab Emirates" />
+              Abu Dhabi
             </span>
-            <span className="text-white whitespace-nowrap" role="listitem">
-              🇬🇧 London{" "}
+            <span
+              className="text-[var(--terminal-success)] whitespace-nowrap flex items-center gap-1"
+              role="listitem"
+            >
+              <GH className="w-4 h-3" title="Ghana" />
+              Accra
+            </span>
+            <span
+              className="text-[var(--terminal-success)] whitespace-nowrap flex items-center gap-1"
+              role="listitem"
+            >
+              <US className="w-4 h-3" title="United States" />
+              New York
+            </span>
+            <span
+              className="text-white whitespace-nowrap flex items-center gap-1"
+              role="listitem"
+            >
+              <GB className="w-4 h-3" title="United Kingdom" />
+              London{" "}
               <span className="text-yellow-400 font-bold">
                 [current location]
               </span>
