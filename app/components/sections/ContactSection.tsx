@@ -72,7 +72,7 @@ export const ContactSection = () => {
                 isBuildWithMeVisible ? "glow-once" : ""
               }`}
             >
-              Build with me {isConsultationFormOpen ? "▲" : "▼"}
+              Build with me 🚀
             </button>
           </TerminalPrompt>
         </div>

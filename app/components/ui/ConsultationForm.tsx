@@ -160,7 +160,7 @@ export const ConsultationForm = ({
 
   return createPortal(
     <div
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 consultation-form-modal flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 consultation-form-modal flex items-center justify-center p-4 sm:p-6"
       onClick={(e) => {
         if (e.target === e.currentTarget) {
           onClose();
@@ -168,8 +168,8 @@ export const ConsultationForm = ({
       }}
     >
       <div
-        className="bg-gray-900/95 border border-gray-600 rounded-lg w-full max-w-2xl shadow-2xl flex flex-col relative mx-auto"
-        style={{ maxHeight: "calc(100vh - 2rem)" }}
+        className="bg-gray-900/95 border border-gray-600 rounded-lg w-full max-w-[95%] sm:max-w-2xl shadow-2xl flex flex-col relative mx-auto"
+        style={{ maxHeight: "80vh", minHeight: "50vh" }}
       >
         <div className="bg-gray-900/95 border-b border-gray-600 p-4 flex items-center justify-between flex-shrink-0">
           <div className="terminal-prompt-wrapper">
@@ -198,17 +198,17 @@ export const ConsultationForm = ({
         <div className="overflow-y-auto flex-1 min-h-0">
           <div className="p-6">
             <div className="command-output">
-              <div className="text-[var(--terminal-accent)] mb-4 text-lg">
+              <div className="text-[var(--terminal-accent)] mb-4 text-base sm:text-lg">
                 Free Consultation Request
               </div>
-              <p className="text-sm text-[var(--terminal-muted)] mb-6">
+              <p className="text-xs sm:text-sm text-[var(--terminal-muted)] mb-6">
                 Tell me about your project and let&apos;s build something
                 amazing together. All consultations are free and confidential.
               </p>
 
               {submitStatus === "success" && (
                 <div className="bg-green-900/30 border border-green-600 rounded p-4 mb-6 text-green-300">
-                  <div className="flex items-center">
+                  <div className="flex items-center text-xs sm:text-sm">
                     <span className="text-green-400 mr-2">✓</span>
                     Thanks! I&apos;ll get back to you within 24 hours.
                   </div>
@@ -217,7 +217,7 @@ export const ConsultationForm = ({
 
               {submitStatus === "error" && (
                 <div className="bg-red-900/30 border border-red-600 rounded p-4 mb-6 text-red-300">
-                  <div className="flex items-center">
+                  <div className="flex items-center text-xs sm:text-sm">
                     <span className="text-red-400 mr-2">✗</span>
                     Something went wrong. Please try again or email me directly.
                   </div>
@@ -229,7 +229,7 @@ export const ConsultationForm = ({
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm text-[var(--terminal-accent)] mb-2"
+                      className="block text-xs sm:text-sm text-[var(--terminal-accent)] mb-2"
                     >
                       Name *
                     </label>
@@ -241,7 +241,7 @@ export const ConsultationForm = ({
                         value={formData.name}
                         onChange={handleFormInputChange}
                         required
-                        className={`w-full bg-gray-800/50 border rounded px-3 py-2 text-white focus:outline-none transition-colors ${
+                        className={`w-full bg-gray-800/50 border rounded px-3 py-2 text-sm sm:text-base text-white focus:outline-none transition-colors ${
                           nameValidation.touched
                             ? nameValidation.isValid
                               ? "border-green-500 focus:border-green-400"
@@ -261,7 +261,7 @@ export const ConsultationForm = ({
                       )}
                     </div>
                     {nameValidation.touched && !nameValidation.isValid && (
-                      <div className="mt-1 text-xs text-red-400 flex items-center">
+                      <div className="mt-1 text-xs sm:text-xs text-red-400 flex items-center">
                         <span className="mr-1">⚠</span>
                         {nameValidation.message}
                       </div>
@@ -271,7 +271,7 @@ export const ConsultationForm = ({
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm text-[var(--terminal-accent)] mb-2"
+                      className="block text-xs sm:text-sm text-[var(--terminal-accent)] mb-2"
                     >
                       Email *
                     </label>
@@ -283,7 +283,7 @@ export const ConsultationForm = ({
                         value={formData.email}
                         onChange={handleFormInputChange}
                         required
-                        className={`w-full bg-gray-800/50 border rounded px-3 py-2 text-white focus:outline-none transition-colors ${
+                        className={`w-full bg-gray-800/50 border rounded px-3 py-2 text-sm sm:text-base text-white focus:outline-none transition-colors ${
                           emailValidation.touched
                             ? emailValidation.isValid
                               ? "border-green-500 focus:border-green-400"
@@ -303,7 +303,7 @@ export const ConsultationForm = ({
                       )}
                     </div>
                     {emailValidation.touched && !emailValidation.isValid && (
-                      <div className="mt-1 text-xs text-red-400 flex items-center">
+                      <div className="mt-1 text-xs sm:text-xs text-red-400 flex items-center">
                         <span className="mr-1">⚠</span>
                         {emailValidation.message}
                       </div>
@@ -311,7 +311,7 @@ export const ConsultationForm = ({
                     {emailValidation.touched &&
                       emailValidation.isValid &&
                       formData.email && (
-                        <div className="mt-1 text-xs text-green-400 flex items-center">
+                        <div className="mt-1 text-xs sm:text-xs text-green-400 flex items-center">
                           <span className="mr-1">✓</span>
                           {emailValidation.message}
                         </div>
@@ -323,7 +323,7 @@ export const ConsultationForm = ({
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm text-[var(--terminal-accent)] mb-2"
+                      className="block text-xs sm:text-sm text-[var(--terminal-accent)] mb-2"
                     >
                       Company
                     </label>
@@ -333,7 +333,7 @@ export const ConsultationForm = ({
                       name="company"
                       value={formData.company}
                       onChange={handleFormInputChange}
-                      className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors"
+                      className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-sm sm:text-base text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors"
                       placeholder="Your company (optional)"
                     />
                   </div>
@@ -341,7 +341,7 @@ export const ConsultationForm = ({
                   <div>
                     <label
                       htmlFor="projectType"
-                      className="block text-sm text-[var(--terminal-accent)] mb-2"
+                      className="block text-xs sm:text-sm text-[var(--terminal-accent)] mb-2"
                     >
                       Project Type *
                     </label>
@@ -351,7 +351,7 @@ export const ConsultationForm = ({
                       value={formData.projectType}
                       onChange={handleFormInputChange}
                       required
-                      className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors"
+                      className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-sm sm:text-base text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors"
                     >
                       <option value="">Select project type</option>
                       <option value="web-application">Web Application</option>
@@ -369,7 +369,7 @@ export const ConsultationForm = ({
                   <div>
                     <label
                       htmlFor="budget"
-                      className="block text-sm text-[var(--terminal-accent)] mb-2"
+                      className="block text-xs sm:text-sm text-[var(--terminal-accent)] mb-2"
                     >
                       Budget Range
                     </label>
@@ -378,7 +378,7 @@ export const ConsultationForm = ({
                       name="budget"
                       value={formData.budget}
                       onChange={handleFormInputChange}
-                      className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors"
+                      className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-sm sm:text-base text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors"
                     >
                       <option value="">Select budget range</option>
                       <option value="under-5k">Under £5,000</option>
@@ -393,7 +393,7 @@ export const ConsultationForm = ({
                   <div>
                     <label
                       htmlFor="timeline"
-                      className="block text-sm text-[var(--terminal-accent)] mb-2"
+                      className="block text-xs sm:text-sm text-[var(--terminal-accent)] mb-2"
                     >
                       Timeline
                     </label>
@@ -402,7 +402,7 @@ export const ConsultationForm = ({
                       name="timeline"
                       value={formData.timeline}
                       onChange={handleFormInputChange}
-                      className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors"
+                      className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-sm sm:text-base text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors"
                     >
                       <option value="">Select timeline</option>
                       <option value="asap">ASAP</option>
@@ -418,7 +418,7 @@ export const ConsultationForm = ({
                 <div>
                   <label
                     htmlFor="description"
-                    className="block text-sm text-[var(--terminal-accent)] mb-2"
+                    className="block text-xs sm:text-sm text-[var(--terminal-accent)] mb-2"
                   >
                     Project Description *
                   </label>
@@ -429,7 +429,7 @@ export const ConsultationForm = ({
                     onChange={handleFormInputChange}
                     required
                     rows={4}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors resize-vertical"
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-sm sm:text-base text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors resize-vertical"
                     placeholder="Describe your project, goals, and any specific requirements..."
                   />
                 </div>
