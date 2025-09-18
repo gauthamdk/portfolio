@@ -321,3 +321,104 @@ section {
     text-shadow: none;
   }
 }
+
+/* Consultation form styles */
+.consultation-form {
+  transform-origin: top;
+}
+
+.consultation-form input:focus,
+.consultation-form select:focus,
+.consultation-form textarea:focus {
+  box-shadow: 0 0 0 2px rgba(212, 165, 116, 0.3);
+}
+
+.consultation-form input::placeholder,
+.consultation-form textarea::placeholder {
+  color: var(--terminal-muted);
+  opacity: 0.7;
+}
+
+.consultation-form select option {
+  background-color: var(--terminal-bg);
+  color: var(--terminal-text);
+}
+
+/* Enhanced button hover effects */
+.consultation-form button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(160, 132, 179, 0.3);
+}
+
+.consultation-form button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Success/Error message animations */
+.consultation-form .bg-green-900\/30,
+.consultation-form .bg-red-900\/30 {
+  animation: slideInFadeIn 0.3s ease-out;
+}
+
+@keyframes slideInFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form field group hover effects */
+.consultation-form .grid > div:hover input,
+.consultation-form .grid > div:hover select,
+.consultation-form div:hover textarea {
+  border-color: rgba(212, 165, 116, 0.5);
+}
+
+/* Enhanced form container styling */
+.consultation-form > div {
+  backdrop-filter: blur(2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Loading spinner enhancement */
+.consultation-form .animate-spin {
+  filter: drop-shadow(0 0 2px currentColor);
+}
+
+/* Email validation styles */
+.consultation-form input.border-green-500 {
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.3);
+}
+
+.consultation-form input.border-red-500 {
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.3);
+}
+
+.consultation-form input.border-green-500:focus {
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.4);
+}
+
+.consultation-form input.border-red-500:focus {
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.4);
+}
+
+/* Validation message animations */
+.consultation-form .text-red-400,
+.consultation-form .text-green-400 {
+  animation: fadeInSlide 0.2s ease-out;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
