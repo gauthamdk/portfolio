@@ -356,6 +356,8 @@ export const ConsultationForm = ({
                       className="w-full bg-gray-800/50 border border-gray-600 rounded px-3 py-2 text-sm sm:text-base text-white focus:border-[var(--terminal-accent)] focus:outline-none transition-colors"
                     >
                       <option value="">Select project type</option>
+                      <option value="ai-consultation">AI Consultation</option>
+                      <option value="ai-integration">AI Integration</option>
                       <option value="web-application">Web Application</option>
                       <option value="mobile-app">Mobile App</option>
                       <option value="api-development">API Development</option>
