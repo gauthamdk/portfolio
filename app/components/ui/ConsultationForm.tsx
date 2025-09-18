@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
+import emailjs from "@emailjs/browser";
 import { TerminalPrompt } from "./TerminalPrompt";
 import { useFormValidation } from "../../hooks";
 
@@ -19,6 +20,11 @@ interface ConsultationFormProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
+// EmailJS configuration
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "";
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "";
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "";
 
 export const ConsultationForm = ({
   isOpen,
@@ -121,12 +127,26 @@ export const ConsultationForm = ({
     setSubmitStatus("idle");
 
     try {
-      // Simulate form submission - replace with actual endpoint
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company || "Not specified",
+        project_type: formData.projectType,
+        budget: formData.budget || "Not specified",
+        timeline: formData.timeline || "Not specified",
+        message: formData.description,
+        to_email: "gautham.dkl@gmail.com", // Your email
+      };
 
-      // For now, we'll just log the form data and show success
-      console.log("Consultation form submitted:", formData);
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
 
+      console.log("Consultation form submitted successfully:", formData);
       setSubmitStatus("success");
 
       // Reset form data
