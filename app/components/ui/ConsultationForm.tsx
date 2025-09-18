@@ -226,24 +226,6 @@ export const ConsultationForm = ({
                 amazing together. All consultations are free and confidential.
               </p>
 
-              {submitStatus === "success" && (
-                <div className="bg-green-900/30 border border-green-600 rounded p-4 mb-6 text-green-300">
-                  <div className="flex items-center text-xs sm:text-sm">
-                    <span className="text-green-400 mr-2">✓</span>
-                    Thanks! I&apos;ll get back to you within 24 hours.
-                  </div>
-                </div>
-              )}
-
-              {submitStatus === "error" && (
-                <div className="bg-red-900/30 border border-red-600 rounded p-4 mb-6 text-red-300">
-                  <div className="flex items-center text-xs sm:text-sm">
-                    <span className="text-red-400 mr-2">✗</span>
-                    Something went wrong. Please try again or email me directly.
-                  </div>
-                </div>
-              )}
-
               <form onSubmit={handleConsultationSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -502,6 +484,25 @@ export const ConsultationForm = ({
                   </button>
                 </div>
               </form>
+
+              {/* Success and Error Messages below the form */}
+              {submitStatus === "success" && (
+                <div className="mt-4 bg-green-900/30 border border-green-600 rounded p-4 text-green-300">
+                  <div className="flex items-center text-xs sm:text-sm">
+                    <span className="text-green-400 mr-2">✓</span>
+                    Thanks! I&apos;ll get back to you within 24 hours.
+                  </div>
+                </div>
+              )}
+
+              {submitStatus === "error" && (
+                <div className="mt-4 bg-red-900/30 border border-red-600 rounded p-4 text-red-300">
+                  <div className="flex items-center text-xs sm:text-sm">
+                    <span className="text-red-400 mr-2">✗</span>
+                    Something went wrong. Please try again or email me directly.
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
