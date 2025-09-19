@@ -61,6 +61,14 @@ export const ContactSection = () => {
             type="file"
             href="https://twitter.com/0xzorog"
           />
+          <FileItem
+            permissions="-rw-r--r--"
+            size="0.2KB"
+            date="2025"
+            name="medium.url"
+            type="file"
+            href="https://medium.com/@gauthamslife"
+          />
         </div>
       </div>
 
