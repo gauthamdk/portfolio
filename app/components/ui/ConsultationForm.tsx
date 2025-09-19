@@ -357,7 +357,6 @@ export const ConsultationForm = ({
                     >
                       <option value="">Select project type</option>
                       <option value="ai-consultation">AI Consultation</option>
-                      <option value="ai-integration">AI Integration</option>
                       <option value="web-application">Web Application</option>
                       <option value="mobile-app">Mobile App</option>
                       <option value="api-development">API Development</option>
