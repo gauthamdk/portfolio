@@ -10,14 +10,14 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Gautham Dinesh - Software Engineer & Full Stack Developer",
+    default: "Gautham Dinesh - AI Product Engineer",
     template: "%s | Gautham Dinesh",
   },
   description:
-    "Gautham Dinesh is a Software Engineer at Goldman Sachs based in London. Expert in Java, Python, JavaScript, TypeScript, React, Next.js, AWS, Docker, and Kubernetes. View my portfolio of projects and experience.",
+    "Gautham Dinesh is a Forward Deployed AI Product Engineer at BrainCo based in Dubai. Expert in Java, Python, JavaScript, TypeScript, React, Next.js, AWS, Docker, and Kubernetes. View my portfolio of projects and experience.",
   keywords: [
     "Gautham Dinesh",
-    "Software Engineer",
+    "AI Product Engineer",
     "Full Stack Developer",
     "Goldman Sachs",
     "London",
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://gautham.dk",
-    title: "Gautham Dinesh - Software Engineer & Full Stack Developer",
+    title: "Gautham Dinesh - AI Product Engineer",
     description:
-      "Gautham Dinesh is a Software Engineer at Goldman Sachs based in London. Expert in Java, Python, JavaScript, TypeScript, React, Next.js, AWS, Docker, and Kubernetes. View my portfolio of projects and experience.",
+      "Gautham Dinesh is a Forward Deployed AI Product Engineer at BrainCo based in Dubai. Expert in Java, Python, JavaScript, TypeScript, React, Next.js, AWS, Docker, and Kubernetes. View my portfolio of projects and experience.",
     siteName: "Gautham Dinesh Portfolio",
     images: [
       {
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Gautham Dinesh - Software Engineer & Full Stack Developer",
+    title: "Gautham Dinesh - AI Product Engineer",
     description:
-      "Gautham Dinesh is a Software Engineer at Goldman Sachs based in London. Expert in Java, Python, JavaScript, TypeScript, React, Next.js, AWS, Docker, and Kubernetes.",
+      "Gautham Dinesh is a Forward Deployed AI Product Engineer at BrainCo based in Dubai. Expert in Java, Python, JavaScript, TypeScript, React, Next.js, AWS, Docker, and Kubernetes.",
     creator: "@0xzorog",
     images: ["/og-image.png"],
   },
