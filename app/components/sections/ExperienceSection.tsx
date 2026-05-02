@@ -14,8 +14,16 @@ export const ExperienceSection = () => {
         <div className="space-y-1">
           <FileItem
             permissions="drwxr-xr-x"
+            size="5.0KB"
+            date="Nov 2025 - Present"
+            name="brainco/ai-product-engineer-fde"
+            type="directory"
+          />
+
+          <FileItem
+            permissions="drwxr-xr-x"
             size="4.2KB"
-            date="Jul 2023 - Present"
+            date="Jul 2023 - Nov 2025"
             name="goldman-sachs/swe"
             type="directory"
           />

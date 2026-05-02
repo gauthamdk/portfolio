@@ -45,6 +45,13 @@ export const HeroSection = () => {
               Kerala
             </span>
             <span
+              className="text-[var(--terminal-success)] whitespace-nowrap flex items-center gap-1"
+              role="listitem"
+            >
+              <GH className="w-4 h-3" title="Ghana" />
+              Accra
+            </span>
+            <span
               className="text-[var(--terminal-success)] flex items-center gap-1"
               role="listitem"
             >
@@ -55,25 +62,24 @@ export const HeroSection = () => {
               className="text-[var(--terminal-success)] whitespace-nowrap flex items-center gap-1"
               role="listitem"
             >
-              <GH className="w-4 h-3" title="Ghana" />
-              Accra
+              <US className="w-4 h-3" title="United States" />
+              New York
             </span>
             <span
               className="text-[var(--terminal-success)] whitespace-nowrap flex items-center gap-1"
               role="listitem"
             >
-              <US className="w-4 h-3" title="United States" />
-              New York
+              <GB className="w-4 h-3" title="United Kingdom" />
+              London
             </span>
             <span
-              className="text-white whitespace-nowrap flex items-center gap-1"
+              className="text-white whitespace-nowrap flex items-center gap-1.5"
               role="listitem"
+              aria-current="location"
             >
-              <GB className="w-4 h-3" title="United Kingdom" />
-              London{" "}
-              <span className="text-yellow-400 font-bold">
-                [current location]
-              </span>
+              <AE className="w-4 h-3" title="United Arab Emirates" />
+              Dubai
+              <span className="location-pulse" aria-label="Current location" />
             </span>
           </div>
         </div>

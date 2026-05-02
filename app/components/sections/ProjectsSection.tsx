@@ -14,6 +14,15 @@ export const ProjectsSection = () => {
         <div className="space-y-1">
           <FileItem
             permissions="-rwxr-xr-x"
+            size="4.8KB"
+            date="2026"
+            name="pixclaw"
+            type="executable"
+            href="https://pixclaw.io"
+          />
+
+          <FileItem
+            permissions="-rwxr-xr-x"
             size="4.2KB"
             date="2025"
             name="movies-in-order"
